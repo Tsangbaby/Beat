@@ -1,9 +1,9 @@
 Package: com.nx.stheno
 Name: Stheno15
-Description: Stheno15 phase-one reconstruction build candidate; functionality incomplete.
+Description: Stheno15 reconstruction startup-safety candidate; Scene hosting incomplete.
 Maintainer: Crassna
 Author: Crassna
 Section: Tweaks
 Depends: dev.theos.orion (>= 1.0.0), firmware (>= 15.0)
 Architecture: iphoneos-arm64e
-Version: 77.1.4.6-0.phase1.1
+Version: 77.1.4.6-0.phase1.2

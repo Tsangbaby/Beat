@@ -48,7 +48,7 @@ public final class DeviceInfo: ObservableObject {
     // 「最后一次手势」的全局副本，供 SwiftUI 视图在管理器切换时保持连续性。
     public var longPress: Bool = false
     public var subGestureType: PanGestureSubType = .none
-    public var state: PanGestureState = .ended
+    @Published public var state: PanGestureState = .ended
 
     private var cancellables = Set<AnyCancellable>()
 

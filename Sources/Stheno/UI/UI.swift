@@ -12,30 +12,7 @@
 import SwiftUI
 import UIKit
 
-// MARK: - SthenoWindow
-
-/// 0x10058 / 0x10194 / 0x1027c / 0x10344
-/// 字符串证据：_TtC6Stheno12SthenoWindow、_UIHostingView<Container>、init(windowScene:)
-public final class SthenoWindow: UIWindow {
-
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        backgroundColor = .clear
-        windowLevel = UIWindow.Level.alert + 1
-    }
-
-    public required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        backgroundColor = .clear
-    }
-
-    public override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        // 0x103a8：只有落在浮窗上的触摸才吃掉，其余透传给宿主
-        let hit = super.hitTest(point, with: event)
-        if hit === self { return nil }
-        return hit
-    }
-}
+// SthenoWindow and its tested owner live in OverlayWindow.swift.
 
 // MARK: - 根容器
 

@@ -1,8 +1,8 @@
-name: Stheno phase-one RootHide build
+name: Stheno RootHide build and startup gates
 
 on:
   push:
-    branches: [main]
+    branches: [main, fix/ios15-startup-safety]
   workflow_dispatch:
 
 permissions:
@@ -36,6 +36,12 @@ jobs:
           python3 -m unittest discover -s tests -v
           bash -n scripts/setup-ci.sh
           git diff --check
+      - name: Execute native ABI backend and UIKit startup regressions
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p artifacts
+          python3 scripts/run-apple-startup-tests.py 2>&1 | tee artifacts/APPLE_STARTUP_TESTS.txt
       - name: Install packaging tools
         shell: bash
         run: |
@@ -68,10 +74,11 @@ jobs:
           xcrun swift --version >> artifacts/XCODE_VERSION.txt
           xcrun --sdk iphoneos --show-sdk-version >> artifacts/XCODE_VERSION.txt
           cp PHASE1.md artifacts/PHASE1.md
+          cp STARTUP_SAFETY.md artifacts/STARTUP_SAFETY.md
       - name: Upload verified RootHide candidate
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
-          name: stheno-phase1-roothide-${{ github.sha }}
+          name: stheno-startup-safety-roothide-${{ github.sha }}
           path: artifacts/
           if-no-files-found: error
           retention-days: 14

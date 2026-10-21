@@ -24,7 +24,10 @@ final class SthenoController {
     let sceneSettingsInterceptor = SceneSettingsInterceptor()
 
     /// 窗口：0x10058 创建，_UIHostingView<Container> 承载 SwiftUI 根视图
-    var window: SthenoWindow?
+    private lazy var overlay = SthenoOverlayPresenter<Container>(content: { Container() })
+    var window: SthenoWindow? { overlay.window }
+    private var bootstrapped = false
+    private var startupSubscriptions = Set<AnyCancellable>()
 
     var isLongPressing = false
     var isClosingSet = Set<String>()
@@ -34,29 +37,40 @@ final class SthenoController {
     // MARK: - 启动（0x715c0 → 0x10058 → 0x1027c）
 
     func bootstrap() {
-        guard window == nil else { return }
-
-        let window = SthenoWindow(frame: UIScreen.main.bounds)
-        window.backgroundColor = .clear
-        window.windowLevel = UIWindow.Level.alert + 1
-        window.rootViewController = UIHostingController(rootView: Container())
-        window.isHidden = false
-
-        // 0x1027c：setWindowScene: —— 绑定到 SpringBoard 的 UIWindowScene
-        if let scene = UIApplication.shared.connectedScenes
-            .compactMap({ $0 as? UIWindowScene })
-            .first(where: { $0.activationState == .foregroundActive }) {
-            window.windowScene = scene
+        guard Thread.isMainThread else {
+            DispatchQueue.main.async { self.bootstrap() }
+            return
         }
-
-        self.window = window
-
+        guard !bootstrapped else {
+            refreshOverlayPresentation()
+            return
+        }
+        bootstrapped = true
         environment.load()
         deviceInfo.refreshScreenMetrics()
         refreshFrontmost()
 
+        // receive(on:) observes the completed mutation, not objectWillChange's
+        // old state. No timer, guessed startup delay, or permanent nil-scene latch.
+        Publishers.Merge(environment.objectWillChange, deviceInfo.$state.map { _ in () })
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in self?.refreshOverlayPresentation() }
+            .store(in: &startupSubscriptions)
+        NotificationCenter.default.publisher(for: UIScene.didActivateNotification)
+            .merge(with: NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification))
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in self?.refreshOverlayPresentation() }
+            .store(in: &startupSubscriptions)
+        refreshOverlayPresentation()
+
         // 0x4d7e8：把环境变化广播给 SthenoKeyboard
         environment.postEnvironmentChange()
+    }
+
+    private func refreshOverlayPresentation() {
+        // Display preferences alone must never publish a modal window at boot.
+        let presented = deviceInfo.state != .ended || !environment.floatings.isEmpty || environment.invalid
+        overlay.update(presented: presented)
     }
 
     // MARK: - 前台应用（0x71488 / 0x4f8e4）

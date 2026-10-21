@@ -18,6 +18,7 @@
 
 #import <UIKit/UIKit.h>
 #import "../Support/SthenoPaths.h"
+#import "../Support/SthenoMethodABI.h"
 
 static NSString *const kPreferencePlist = @"/var/mobile/Library/Preferences/com.nx.stheno.plist";
 static NSString *const kFrontmostJSON   = @"/tmp/stheno_frontmost.json";
@@ -136,10 +137,10 @@ static id hook_initWithSession(id self, SEL _cmd, id session, id options) {
     return orig_initWithSession(self, _cmd, session, options);
 }
 
-static id (*orig_boundsForInterfaceOrientation)(id, SEL, NSInteger);
+static CGRect (*orig_boundsForInterfaceOrientation)(id, SEL, NSInteger);
 
 // 0x4880 — 键盘尺寸计算入口（hook 体在 0x4880 之后，几何分支未逐指令还原）
-static id hook_boundsForInterfaceOrientation(id self, SEL _cmd, NSInteger orientation) {
+static CGRect hook_boundsForInterfaceOrientation(id self, SEL _cmd, NSInteger orientation) {
     if (gKeyboardOverrideEnabled) {
         SthenoReloadFrontmostSnapshot();
     }
@@ -153,6 +154,7 @@ static void SthenoKeyboardNotifyHandler(int token) {
     SthenoReloadKeyboardPreference();
     SthenoReloadFrontmostSnapshot();
 
+    if (orig_remoteKeyboardWindowForScreen == NULL) return;
     id keyboardWindow = orig_remoteKeyboardWindowForScreen(objc_getClass("UIRemoteKeyboardWindow"),
                                                            @selector(remoteKeyboardWindowForScreen:create:),
                                                            [UIScreen mainScreen], NO);
@@ -162,6 +164,14 @@ static void SthenoKeyboardNotifyHandler(int token) {
 }
 
 #pragma mark - 初始化（0x4544）
+
+// A missing or incompatible native selector is not an installation request.
+static void SthenoInstallKeyboardHook(Class cls, SEL selector, IMP replacement, IMP *original,
+                                      const char *result, const char *const *args, size_t count) {
+    Method method = class_getInstanceMethod(cls, selector);
+    if (!SthenoMethodMatchesTypes(method, result, args, count)) return;
+    MSHookMessageEx(cls, selector, replacement, original);
+}
 
 %ctor {
     SthenoReloadKeyboardPreference();
@@ -173,20 +183,26 @@ static void SthenoKeyboardNotifyHandler(int token) {
     }
 
     Class keyboardImpl = objc_getClass("UIKeyboardImpl");
-    MSHookMessageEx(object_getClass(keyboardImpl), @selector(activeInstance),
-                    (IMP)&hook_activeInstance, (IMP *)&orig_activeInstance);
+    const char *noArgs[] = { @encode(id), @encode(SEL) };
+    SthenoInstallKeyboardHook(object_getClass(keyboardImpl), @selector(activeInstance),
+                    (IMP)&hook_activeInstance, (IMP *)&orig_activeInstance, @encode(id), noArgs, 2);
 
     Class keyboardWindow = objc_getClass("UIRemoteKeyboardWindow");
-    MSHookMessageEx(object_getClass(keyboardWindow), @selector(remoteKeyboardWindowForScreen:create:),
-                    (IMP)&hook_remoteKeyboardWindowForScreen, (IMP *)&orig_remoteKeyboardWindowForScreen);
+    const char *windowArgs[] = { @encode(id), @encode(SEL), @encode(id), @encode(BOOL) };
+    SthenoInstallKeyboardHook(object_getClass(keyboardWindow), @selector(remoteKeyboardWindowForScreen:create:),
+                    (IMP)&hook_remoteKeyboardWindowForScreen, (IMP *)&orig_remoteKeyboardWindowForScreen,
+                    @encode(id), windowArgs, 4);
 
     Class scene = objc_getClass("UIScene");
-    MSHookMessageEx(scene, @selector(initWithSession:connectionOptions:),
-                    (IMP)&hook_initWithSession, (IMP *)&orig_initWithSession);
+    const char *sceneArgs[] = { @encode(id), @encode(SEL), @encode(id), @encode(id) };
+    SthenoInstallKeyboardHook(scene, @selector(initWithSession:connectionOptions:),
+                    (IMP)&hook_initWithSession, (IMP *)&orig_initWithSession, @encode(id), sceneArgs, 4);
 
-    Class keyboardImpl2 = objc_getClass("UIKeyboardImpl");
-    MSHookMessageEx(keyboardImpl2, @selector(_boundsForInterfaceOrientation:),
-                    (IMP)&hook_boundsForInterfaceOrientation, (IMP *)&orig_boundsForInterfaceOrientation);
+    // iOS 15 UIScene owns this CGRect-returning method; UIKeyboardImpl does not.
+    const char *boundsArgs[] = { @encode(id), @encode(SEL), @encode(NSInteger) };
+    SthenoInstallKeyboardHook(scene, @selector(_boundsForInterfaceOrientation:),
+                    (IMP)&hook_boundsForInterfaceOrientation, (IMP *)&orig_boundsForInterfaceOrientation,
+                    @encode(CGRect), boundsArgs, 3);
 
     int token = 0;
     notify_register_dispatch(kDarwinNotify.UTF8String, &token, dispatch_get_main_queue(), ^(int t) {

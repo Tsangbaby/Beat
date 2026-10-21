@@ -30,7 +30,7 @@ __attribute__((objc_root_class)) @interface ARCProbe
 @end
 static BOOL gCameraKeepAlive;
 static void SthenoReloadCameraPreference(void);
-static void (*orig_updateClientStateCondition)(id, SEL, id, id);
+static void (*orig_updateClientStateCondition)(id, SEL, void *, id);
 """ + body.group(0)
         result = subprocess.run(
             [clang, "-x", "objective-c++", "-fobjc-runtime=ios-15.0",
@@ -118,12 +118,12 @@ class CloudSwiftRegressions(unittest.TestCase):
 
 
 class OrionBlockABI(unittest.TestCase):
-    def test_hook_completions_are_objective_c_blocks(self):
+    def test_unknown_hook_callbacks_are_opaque_object_pointers(self):
         scene = read("Sources/Stheno/Hooks/Scene.x.swift")
-        self.assertIn("completion: (@convention(block) (Bool) -> Void)?", scene)
-        self.assertIn("completion: @escaping @convention(block) (AnyObject?, NSError?) -> Void", scene)
-        self.assertIn("withResult result: @escaping @convention(block) (AnyObject?, NSError?) -> Void", scene)
-        self.assertNotRegex(scene, r"(?<!NS)Error\?\) -> Void")
+        self.assertIn("completion: AnyObject?", scene)
+        self.assertIn("withResult result: AnyObject?", scene)
+        self.assertNotIn("@convention(block)", scene)
+        self.assertNotIn("completion?(", scene)
 
 
 if __name__ == "__main__":

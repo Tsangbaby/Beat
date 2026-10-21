@@ -23,8 +23,9 @@ import UIKit
 ///
 /// 实现：0x73444（shouldReceiveTouch，80 字节）
 ///      0x73d84 同一函数里也读了这套 selector（说明管理器层会回读识别器状态）
-class _SBFluidSwitcherPanGestureRecognizerHook: ClassHook<_SBFluidSwitcherPanGestureRecognizer> {
+class _SBFluidSwitcherPanGestureRecognizerHook: ClassHook<UIPanGestureRecognizer> {
     typealias Group = SthenoGroup
+    static var targetName: String { "SBFluidSwitcherPanGestureRecognizer" }
 
     /// 0x73444 —— 只在"边缘/环手势"应该生效的触摸上返回 true
     @objc(gestureRecognizer:shouldReceiveTouch:)

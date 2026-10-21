@@ -42,10 +42,11 @@ class SpringBoardHook: ClassHook<SpringBoard> {
     /// 0x715c0 —— 全插件起点：创建 SthenoWindow（承载 SwiftUI 根视图 Container）
     /// 证据：0x10058 里 setRootViewController / setWindowLevel / setBackgroundColor(clear)
     ///       以及 _UIHostingView<Container>（字符串 0x7f5a0）
-    func applicationDidFinishLaunching(_ notification: Notification) {
-        orig.applicationDidFinishLaunching(notification)
+    // UIApplicationDelegate passes an application/id, not an NSNotification.
+    func applicationDidFinishLaunching(_ application: AnyObject?) {
+        orig.applicationDidFinishLaunching(application)
 
-        SthenoController.shared.bootstrap()
+        DispatchQueue.main.async { SthenoController.shared.bootstrap() }
     }
 
     /// 0x70d7c —— 系统方向即将变化：同步所有浮窗的几何
@@ -95,7 +96,7 @@ class SBIconControllerHook: ClassHook<SBIconController> {
     typealias Group = SthenoGroup
 
     @objc(iconManager:launchIconForIconView:withActions:)
-    func iconManager(_ manager: AnyObject?, launchIconFor iconView: AnyObject?, withActions actions: NSSet?) -> Bool {
+    func iconManager(_ manager: AnyObject?, launchIconFor iconView: AnyObject?, withActions actions: NSSet?) {
         // 长按 → 交给原实现（进入抖动/快捷菜单）
         if SthenoController.shared.isLongPressing {
             return orig.iconManager(manager, launchIconFor: iconView, withActions: actions)
@@ -106,11 +107,13 @@ class SBIconControllerHook: ClassHook<SBIconController> {
             return orig.iconManager(manager, launchIconFor: iconView, withActions: actions)
         }
 
-        if let bundleID = SthenoController.shared.bundleIdentifier(ofIconView: iconView) {
-            SthenoController.shared.openFloating(bundleID: bundleID)
-            return true
+        // Scene creation/hosting is incomplete. A display preference alone must
+        // not swallow native launches; reuse only a genuinely existing host.
+        guard let bundleID = SthenoController.shared.bundleIdentifier(ofIconView: iconView),
+              let host = Environment.shared.floatings.first(where: { $0.id == bundleID }),
+              host.scene != nil, !host.views.isEmpty else {
+            return orig.iconManager(manager, launchIconFor: iconView, withActions: actions)
         }
-
-        return orig.iconManager(manager, launchIconFor: iconView, withActions: actions)
+        SthenoController.shared.openFloating(bundleID: bundleID)
     }
 }

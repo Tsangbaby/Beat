@@ -1,5 +1,11 @@
 # Stheno phase-one build candidate
 
+> The first package (`77.1.4.6-0.phase1.1`, f4deea8) was rejected on a handset:
+> black screen after respring. Do not use it. The new `77.1.4.6-0.phase1.2`
+> startup-safety candidate and its remaining limits are documented in
+> [STARTUP_SAFETY.md](STARTUP_SAFETY.md). The notes below describe phase-one
+> history, not successful runtime acceptance.
+
 This is a buildability repair of the user-supplied reconstructed project, NOT
 original Stheno source and NOT a completed functional restoration. Compilation,
 linking and package verification do not establish device safety or compatibility.

@@ -22,9 +22,9 @@ import UIKit
 class SBMainDisplaySceneManagerHook: ClassHook<SBMainDisplaySceneManager> {
     typealias Group = SthenoGroup
 
-    func _scene(_ scene: FBScene, interceptUpdateWithNewSettings settings: AnyObject) -> AnyObject? {
+    func _scene(_ scene: FBScene, interceptUpdateWithNewSettings settings: AnyObject) {
         SthenoController.shared.sceneSettingsInterceptor.record(scene: scene, settings: settings)
-        return orig._scene(scene, interceptUpdateWithNewSettings: settings)
+        orig._scene(scene, interceptUpdateWithNewSettings: settings)
     }
 }
 
@@ -79,11 +79,9 @@ class FBSceneHook: ClassHook<FBScene> {
 
     func _killForReason(_ reason: Int64, andReport report: Bool,
                         withDescription description: String?,
-                        completion: (@convention(block) (Bool) -> Void)?) {
-        if Environment.shared.floatings.contains(where: { $0.id == target.identifier }) {
-            completion?(false)
-            return
-        }
+                        completion: AnyObject?) {
+        // Owner/invoke ABI is unproven. The backend rejects this selector on
+        // FBScene; never synthesize a result for an unknown system callback.
         orig._killForReason(reason, andReport: report, withDescription: description, completion: completion)
     }
 }
@@ -97,7 +95,7 @@ class BNContentViewControllerHook: ClassHook<BNContentViewController> {
     typealias Group = SthenoGroup
 
     @objc(presentPresentable:withOptions:userInfo:)
-    func present(_ presentable: AnyObject, withOptions options: AnyObject?, userInfo: [AnyHashable: Any]?) {
+    func present(_ presentable: AnyObject, withOptions options: UInt, userInfo: [AnyHashable: Any]?) {
         if Environment.shared.ssMask.contains(.voip) || Environment.shared.showEdgeBar {
             if SthenoController.shared.presentAsFloating(presentable: presentable) {
                 return
@@ -145,8 +143,9 @@ class FBSceneManagerHook: ClassHook<FBSceneManager> {
                                     transitionContext: AnyObject,
                                     fromRemnant remnant: AnyObject?,
                                     usingClientProvider provider: AnyObject,
-                                    completion: @escaping @convention(block) (AnyObject?, NSError?) -> Void) {
-        orig._createSceneWithDefinition(definition,
+                                    completion: AnyObject?) -> AnyObject? {
+        // Opaque object/block pointer only: no invented block invocation ABI.
+        return orig._createSceneWithDefinition(definition,
                                        settings: settings,
                                        initialClientSettings: initialClientSettings,
                                        transitionContext: transitionContext,
@@ -167,9 +166,9 @@ class FBSystemServiceHook: ClassHook<FBSystemService> {
                            requestID: String,
                            isTrusted: Bool,
                            options: [AnyHashable: Any],
-                           source: Int,
-                           originalSource: Int,
-                           withResult result: @escaping @convention(block) (AnyObject?, NSError?) -> Void) {
+                           source: AnyObject?,
+                           originalSource: AnyObject?,
+                           withResult result: AnyObject?) {
         var options = options
         if Environment.shared.floatings.contains(where: { $0.id == bundleID }) {
             options["STHENO_FLOATING"] = true

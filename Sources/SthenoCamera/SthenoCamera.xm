@@ -13,6 +13,7 @@
 #import <substrate.h>
 
 #import "../Support/SthenoPaths.h"
+#import "../Support/SthenoMethodABI.h"
 
 static BOOL gCameraKeepAlive = NO;   // 对应 __common+0x0（文件偏移 0xc028）
 
@@ -29,10 +30,10 @@ static void SthenoReloadCameraPreference(void) {
     gCameraKeepAlive = [cameraValue boolValue];
 }
 
-static void (*orig_updateClientStateCondition)(id, SEL, id, id);
+static void (*orig_updateClientStateCondition)(id, SEL, void *, id);
 
 // 0x4100
-static void hook_updateClientStateCondition(id self, SEL _cmd, id condition, id newValue) {
+static void hook_updateClientStateCondition(id self, SEL _cmd, void *condition, id newValue) {
     id retainedValue = newValue;  // ARC owns the strong local for this call.
     SthenoReloadCameraPreference();
 
@@ -46,6 +47,9 @@ static void hook_updateClientStateCondition(id self, SEL _cmd, id condition, id 
 // 0x40b0 — %ctor
 %ctor {
     Class monitorClass = objc_getClass("FigCaptureClientSessionMonitor");
+    const char *args[] = { @encode(id), @encode(SEL), @encode(void *), @encode(id) };
+    Method method = class_getInstanceMethod(monitorClass, @selector(_updateClientStateCondition:newValue:));
+    if (!SthenoMethodMatchesTypes(method, @encode(void), args, 4)) return;
     MSHookMessageEx(monitorClass,
                     @selector(_updateClientStateCondition:newValue:),
                     (IMP)&hook_updateClientStateCondition,

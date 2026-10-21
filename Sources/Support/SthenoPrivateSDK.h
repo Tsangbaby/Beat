@@ -30,9 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SBIconController : NSObject
 @end
-@interface _SBFluidSwitcherPanGestureRecognizer : UIPanGestureRecognizer
-@end
-@interface SBGrabberTongue : UIView
+@interface SBGrabberTongue : NSObject
 @end
 
 @interface SBFZStackParticipant : NSObject

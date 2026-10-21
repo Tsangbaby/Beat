@@ -17,7 +17,33 @@ import Orion
 struct SthenoGroup: HookGroup { }
 
 /// Orion owns this short-lived entry; the coordinator remains one singleton.
-struct SthenoEntry: Tweak {
+struct SthenoEntry: TweakWithBackend {
+    static var backend: SthenoValidatedBackend<Backends.Substrate> {
+        SthenoValidatedBackend(upstream: Backends.Substrate(), replacements: [
+            "UIApplication": UIApplicationHook.self,
+            "SpringBoard": SpringBoardHook.self,
+            "SBApplication": SBApplicationHook.self,
+            "SBIconController": SBIconControllerHook.self,
+            "SBFluidSwitcherPanGestureRecognizer": _SBFluidSwitcherPanGestureRecognizerHook.self,
+            "SBGrabberTongue": SBGrabberTongueHook.self,
+            "SBFluidSwitcherGestureManager": SBFluidSwitcherGestureManagerHook.self,
+            "SBMainDisplaySceneManager": SBMainDisplaySceneManagerHook.self,
+            "UIApplicationSceneDeactivationManager": UIApplicationSceneDeactivationManagerHook.self,
+            "FBScene": FBSceneHook.self,
+            "BNContentViewController": BNContentViewControllerHook.self,
+            "SBDeviceApplicationSceneViewController": SBDeviceApplicationSceneViewControllerHook.self,
+            "SBApplicationController": SBApplicationControllerHook.self,
+            "FBSceneManager": FBSceneManagerHook.self,
+            "FBSystemService": FBSystemServiceHook.self,
+            "UIStatusBarWindow": UIStatusBarWindowHook.self,
+        ])
+    }
+
+    static func handleError(_ error: OrionHookError) {
+        // Recoverable registration failures must not kill SpringBoard.
+        // No global Orion error handler is replaced and no private data is logged.
+    }
+
     init() {
         SthenoGroup().activate()
     }
