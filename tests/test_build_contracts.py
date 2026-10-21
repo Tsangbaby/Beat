@@ -117,5 +117,14 @@ class CloudSwiftRegressions(unittest.TestCase):
         self.assertIn('IOServiceMatching("IOPlatformExpertDevice")?.takeUnretainedValue()', state)
 
 
+class OrionBlockABI(unittest.TestCase):
+    def test_hook_completions_are_objective_c_blocks(self):
+        scene = read("Sources/Stheno/Hooks/Scene.x.swift")
+        self.assertIn("completion: (@convention(block) (Bool) -> Void)?", scene)
+        self.assertIn("completion: @escaping @convention(block) (AnyObject?, NSError?) -> Void", scene)
+        self.assertIn("withResult result: @escaping @convention(block) (AnyObject?, NSError?) -> Void", scene)
+        self.assertNotRegex(scene, r"(?<!NS)Error\?\) -> Void")
+
+
 if __name__ == "__main__":
     unittest.main()

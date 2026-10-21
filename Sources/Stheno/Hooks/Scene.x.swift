@@ -79,7 +79,7 @@ class FBSceneHook: ClassHook<FBScene> {
 
     func _killForReason(_ reason: Int64, andReport report: Bool,
                         withDescription description: String?,
-                        completion: ((Bool) -> Void)?) {
+                        completion: (@convention(block) (Bool) -> Void)?) {
         if Environment.shared.floatings.contains(where: { $0.id == target.identifier }) {
             completion?(false)
             return
@@ -145,7 +145,7 @@ class FBSceneManagerHook: ClassHook<FBSceneManager> {
                                     transitionContext: AnyObject,
                                     fromRemnant remnant: AnyObject?,
                                     usingClientProvider provider: AnyObject,
-                                    completion: @escaping (AnyObject?, Error?) -> Void) {
+                                    completion: @escaping @convention(block) (AnyObject?, NSError?) -> Void) {
         orig._createSceneWithDefinition(definition,
                                        settings: settings,
                                        initialClientSettings: initialClientSettings,
@@ -169,7 +169,7 @@ class FBSystemServiceHook: ClassHook<FBSystemService> {
                            options: [AnyHashable: Any],
                            source: Int,
                            originalSource: Int,
-                           withResult result: @escaping (AnyObject?, Error?) -> Void) {
+                           withResult result: @escaping @convention(block) (AnyObject?, NSError?) -> Void) {
         var options = options
         if Environment.shared.floatings.contains(where: { $0.id == bundleID }) {
             options["STHENO_FLOATING"] = true
