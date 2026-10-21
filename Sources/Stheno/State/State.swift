@@ -229,7 +229,7 @@ public final class AppSearcher {
             if bundleID == "com.apple.mobilephone" { return }
             if proxy.isLaunchProhibited() { return }
             let name = proxy.localizedName() ?? bundleID
-            snapshots[bundleID] = Snapshot(name: name, id: bundleID)
+            self.snapshots[bundleID] = Snapshot(name: name, id: bundleID)
         }
     }
 }
@@ -298,7 +298,7 @@ public final class SignedStamp: ObservableObject {
     /// 具体内容未定 —— 可能是设备码缓存，也可能是授权文件里的一段。
     private static var cachedValueStorage: String = ""
     private static let cachedValueOnce: Void = {
-        cachedValueStorage = Self.deviceCode()
+        SignedStamp.cachedValueStorage = SignedStamp.deviceCode()
     }()
 
     static func cachedValue() -> String {
@@ -316,8 +316,11 @@ public final class SignedStamp: ObservableObject {
 
     // IOKit C types and ownership annotations are imported by the bridge header.
     private static func ioPlatformUUID() -> String? {
+        // The imported legacy IOKit header lacks CF ownership annotations.
+        // Matching returns +1, consumed by IOServiceGetMatchingService;
+        // do not transfer that creator reference into ARC and release it twice.
         let service = IOServiceGetMatchingService(0,
-                                                  IOServiceMatching("IOPlatformExpertDevice"))
+                                                  IOServiceMatching("IOPlatformExpertDevice")?.takeUnretainedValue())
         guard service != 0 else { return nil }
         defer { IOObjectRelease(service) }
         return IORegistryEntryCreateCFProperty(service,

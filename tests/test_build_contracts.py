@@ -109,5 +109,13 @@ class IOKitABI(unittest.TestCase):
         self.assertNotIn('@_silgen_name("IOServiceMatching")', read("Sources/Stheno/State/State.swift"))
 
 
+class CloudSwiftRegressions(unittest.TestCase):
+    def test_state_imports_match_observed_apple_compiler_contracts(self):
+        state = read("Sources/Stheno/State/State.swift")
+        self.assertIn("self.snapshots[bundleID] = Snapshot", state)
+        self.assertIn("SignedStamp.cachedValueStorage = SignedStamp.deviceCode()", state)
+        self.assertIn('IOServiceMatching("IOPlatformExpertDevice")?.takeUnretainedValue()', state)
+
+
 if __name__ == "__main__":
     unittest.main()
