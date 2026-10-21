@@ -1,0 +1,610 @@
+
+== __C.UIDeviceOrientation  kind=18  @0x86c34  fields=0
+
+== __C.CGPoint  kind=17  @0x86c54  fields=2
+    x: z
+    y: z
+
+== __C.CGSize  kind=17  @0x86c74  fields=2
+    width: z
+    height: z
+
+== __C.Level  kind=17  @0x86ca0  fields=1
+    rawValue: z
+
+== __C.CGImage  kind=16  @0x86cc0  fields=0
+
+== __C.CGRect  kind=17  @0x86cf0  fields=2
+    origin: __C.CGPoint
+    size: __C.CGSize
+
+== :.Stheno.Reflect  kind=17  @0x86d1c  fields=5
+    _env: indirect@0x8a754
+    _device: indirect@0x8a762
+    _manager: indirect@0x8a770
+    _colorScheme: indirect@0x8a740
+    _gestureState: indirect@0x8a77e
+
+== :.Stheno.RingGestureRegionControlView  kind=17  @0x86d6c  fields=10
+    _env: indirect@0x8a754
+    _device: indirect@0x8a762
+    _rightPecentLast: 	�D
+    _leftPecentLast: 	�D
+    _edgeWidthLast: 	�D
+    _rightPecent: indirect@0x8ba2e
+    _leftPecent: indirect@0x8ba2e
+    _edgeWidth: indirect@0x8ba2e
+    _translationPadding: 	�D
+    _gestureState: indirect@0x8a77e
+
+== :.Stheno.GenericEightable  kind=17  @0x86e20  fields=8
+    one: Int
+    two: Int
+    three: Int
+    four: Int
+    five: Int
+    six: Int
+    seven: Int
+    eight: x
+
+== :.Stheno.SthenoController  kind=16  @0x86e50  fields=0
+
+== :.Stheno.SthenoWindow  kind=16  @0x86f50  fields=0
+
+== :.Stheno.LecardAlertView  kind=17  @0x86f7c  fields=5
+    _device: indirect@0x8a762
+    title: String
+    message: String
+    primaryAction: :.Stheno.AlertAction
+    secondaryAction: :.Stheno.AlertAction
+
+== :.Stheno.AlertAction  kind=17  @0x86f98  fields=2
+    title: String
+    action: yyc
+
+== :.Stheno.CustomRectangle  kind=17  @0x86fdc  fields=2
+    width: z
+    height: z
+
+== :.Stheno.ReflectManager  kind=16  @0x86ff8  fields=39
+    forceForeground: Bool
+    scene: indirect@0x8c5d2
+    transitionContext: indirect@0x8c5d2
+    id: String
+    icon: indirect@0x8c5da
+    running: Bool
+    authorize: Bool
+    paddingScale: Double
+    covered: Bool
+    fingerStartLocation: __C.CGPoint
+    translationPadding: __C.CGSize
+    _colorScheme: indirect@0x8a740
+    _medusaed: indirect@0x8c5e4
+    medusaFrameLast: __C.CGSize
+    iconOffsetLast: __C.CGSize
+    finalFrame: __C.CGSize
+    finalScale: Double
+    finalOffset: __C.CGSize
+    finalCardFrame: __C.CGSize
+    finalCardCorner: Double
+    _launching: indirect@0x8c5e4
+    _showCover: indirect@0x8c5e4
+    _interfaceOrientation: indirect@0x8c5ee
+    supportedLaunchOrientation: Int
+    _views: indirect@0x8c5f8
+    keyboard: Array<UIView>
+    cover: UIView
+    iconMoved: Bool
+    _offset: indirect@0x8c60e
+    _iconOffset: indirect@0x8c61c
+    _dragScale: indirect@0x8c62a
+    baseOffsetLast: indirect@0x8c634
+    baseScaleLast: indirect@0x8c63a
+    _scale: indirect@0x8c640
+    _scaleToIcon: indirect@0x8c5e4
+    subGestureType: indirect@0x8c64e
+    longPress: Bool
+    state: indirect@0x8c654
+    presenter: indirect@0x8c5d2
+
+== :.Stheno.IntroductionView  kind=17  @0x87568  fields=2
+    _device: indirect@0x8a762
+    size: Double
+
+== :.Stheno.GlobalControlView  kind=17  @0x87584  fields=3
+    _device: indirect@0x8a762
+    _colorScheme: indirect@0x8a740
+    size: Double
+
+== :.Stheno.WindowGestureControlView  kind=17  @0x875ac  fields=4
+    _colorScheme: indirect@0x8a740
+    size: Double
+    name: String
+    _active: @�
+
+== :.Stheno.FourEdgeControlView  kind=17  @0x875d4  fields=4
+    _colorScheme: indirect@0x8a740
+    size: Double
+    name: String
+    _active: @�
+
+== :.Stheno.InterfaceOrientationModeView  kind=17  @0x875fc  fields=5
+    _colorScheme: indirect@0x8a740
+    size: Double
+    name: String
+    _active: @�
+    _activeName: @�
+
+== :.Stheno.AuthorizeControlView  kind=17  @0x87624  fields=4
+    _colorScheme: indirect@0x8a740
+    size: Double
+    name: String
+    _active: @�
+
+== :.Stheno.URLControlView  kind=17  @0x8764c  fields=4
+    _colorScheme: indirect@0x8a740
+    size: Double
+    name: String
+    _active: @�
+
+== :.Stheno.NotificationControlView  kind=17  @0x87674  fields=4
+    _colorScheme: indirect@0x8a740
+    size: Double
+    name: String
+    _active: @�
+
+== :.Stheno.RingOnlyControlView  kind=17  @0x8769c  fields=4
+    _colorScheme: indirect@0x8a740
+    size: Double
+    name: String
+    _active: @�
+
+== :.Stheno.PasteLicenceKeyView  kind=17  @0x876c4  fields=3
+    _colorScheme: indirect@0x8a740
+    size: Double
+    name: String
+
+== :.Stheno.SeperatorView  kind=17  @0x876ec  fields=2
+    size: Double
+    name: String
+
+== :.Stheno.CameraControlView  kind=17  @0x87708  fields=4
+    _colorScheme: indirect@0x8a740
+    size: Double
+    name: String
+    _active: @�
+
+== :.Stheno.ListenControlView  kind=17  @0x87730  fields=4
+    _colorScheme: indirect@0x8a740
+    size: Double
+    name: String
+    _active: @�
+
+== :.Stheno._169ControllView  kind=17  @0x87758  fields=3
+    _colorScheme: indirect@0x8a740
+    size: Double
+    _active: @�
+
+== :.Stheno.SynchronizeControlView  kind=17  @0x87780  fields=3
+    _colorScheme: indirect@0x8a740
+    size: Double
+    _active: @�
+
+== :.Stheno.EdgeBarControlView  kind=17  @0x877a8  fields=5
+    _colorScheme: indirect@0x8a740
+    size: Double
+    name: String
+    _active: @�
+    _edge: @�
+
+== :.Stheno.�.BlurFadeModifier  kind=17  @0x87a5c  fields=4
+    scaleWidth: Double
+    scaleHeidth: Double
+    blur: Double
+    offset: __C.CGSize
+
+== :.Stheno.LicenseInputView  kind=17  @0x87aa0  fields=3
+    _device: indirect@0x8a762
+    _colorScheme: indirect@0x8a740
+    _text: @�
+
+== :.Stheno.RingState  kind=16  @0x87af0  fields=16
+    _scale: indirect@0x8c62a
+    _offset: indirect@0x8c61c
+    _rotationAngle: ���Q
+    _selected: indirect@0x8c5ee
+    _trash: ���Q
+    _radius: indirect@0x8ba2e
+    offsetLast: __C.CGSize
+    radiusLast: Double
+    fingerLocation: __C.CGPoint
+    fingerStartLocation: __C.CGPoint
+    translationPadding: __C.CGSize
+    longPress: Bool
+    subGestureType: indirect@0x8c64e
+    state: indirect@0x8c654
+    rings: Array<Range<Int>>
+    pinned: Bool
+
+== :.Stheno.TrashAppState  kind=16  @0x87df0  fields=2
+    manager: :.Stheno.ReflectManager
+    _offset: indirect@0x8c61c
+
+== :.Stheno.GestureState  kind=18  @0x87e80  fields=0
+
+== :.Stheno.RingView  kind=17  @0x87e9c  fields=12
+    _device: indirect@0x8a762
+    _colorScheme: indirect@0x8a740
+    _ringState: ��	��
+    _rotationAngleLast: `	�P
+    _scaleAngle: `	�P
+    _scaleAngleLast: `	�P
+    _gestureState: indirect@0x8a77e
+    _translationPadding: 	�D
+    _angleLast: `	�P
+    _longPress: @�
+    _movedManager: `	�P
+    _movedOffset: 	�D
+
+== :.Stheno.GallerySwitchView  kind=17  @0x87ec4  fields=3
+    _colorScheme: indirect@0x8a740
+    size: Double
+    _active: @�
+
+== :.Stheno.TrashAppView  kind=17  @0x87eec  fields=2
+    _state: ��	��
+    _gestureState: indirect@0x8a77e
+
+== :.Stheno.AppSearcher  kind=16  @0x87f80  fields=1
+    snapshots: Dictionary<String>
+
+== :.Stheno.App  kind=17  @0x87ff4  fields=2
+    name: String
+    id: String
+
+== :.Stheno.Tab  kind=18  @0x88010  fields=0
+
+== :.Stheno.GalleryView  kind=17  @0x8802c  fields=3
+    _device: indirect@0x8a762
+    _selectedTab: indirect@0x8fa88
+    _scale: 	�D
+
+== :.Stheno.TabBar  kind=17  @0x88048  fields=2
+    _color: indirect@0x8fd78
+    _selectedTab: b	
+
+== :.Stheno.AppGrid  kind=17  @0x88064  fields=2
+    _colorScheme: indirect@0x8a740
+    tab: :.Stheno.Tab
+
+== :.Stheno.TabIcon  kind=17  @0x880b4  fields=2
+    app: :.Stheno.App
+    _added: @�
+
+== :.Stheno.TabItem  kind=17  @0x880d0  fields=4
+    name: String
+    icon: String
+    color: @�
+    selection: :.Stheno.Tab
+
+== :.Stheno.DeviceInfo  kind=16  @0x88164  fields=13
+    _key: )� 
+    _apps: )� 
+    _baseKeyboardOffset: indirect@0x8ba2e
+    _unlocked: indirect@0x8c5e4
+    _orientation: indirect@0x90852
+    _managers: indirect@0x8c696
+    cornerRadius: Double
+    _keyboardHeight: indirect@0x8c62a
+    frontmost: String
+    baseKeyboardOffsetLast: Double
+    longPress: Bool
+    subGestureType: indirect@0x8c64e
+    state: indirect@0x8c654
+
+== :.Stheno.PanGestureState  kind=18  @0x883f4  fields=0
+
+== :.Stheno.PanGestureSubType  kind=18  @0x88410  fields=0
+
+== :.Stheno.Environment  kind=16  @0x8842c  fields=25
+    floatingsHasKeyboard: Bool
+    _modify: indirect@0x8c5e4
+    floatingsLast: Array<h���G>
+    _floatings: indirect@0x8c696
+    _dualManagers: indirect@0x8c696
+    trash: Array<����G>
+    user: Array<����G>
+    system: Array<����G>
+    previewIndex: Int
+    _rightPecent: indirect@0x8ba2e
+    _leftPecent: indirect@0x8ba2e
+    _edgeWidth: indirect@0x8ba2e
+    _interfaceOrientationMode: indirect@0x90878
+    _URLScheme: indirect@0x90882
+    _ringOnly: indirect@0x90882
+    _ssMask: indirect@0x90878
+    _fourEdge: indirect@0x90882
+    _camera: indirect@0x90882
+    _effectEdge: indirect@0x90878
+    _synchronize: indirect@0x90882
+    __169: indirect@0x90882
+    _showEdgeBar: indirect@0x8c5e4
+    _invalid: indirect@0x8c5e4
+    _showRing: indirect@0x8c5e4
+    _showLicense: indirect@0x8c5e4
+
+== :.Stheno.BaseScale  kind=17  @0x8884c  fields=4
+    pp: Double
+    pl: Double
+    lp: Double
+    ll: Double
+
+== :.Stheno.BaseOffset  kind=17  @0x88868  fields=4
+    pp: __C.CGSize
+    pl: __C.CGSize
+    lp: __C.CGSize
+    ll: __C.CGSize
+
+== :.Stheno.Container  kind=17  @0x88884  fields=0
+
+== :.Stheno.Switcher  kind=17  @0x888a0  fields=4
+    _env: indirect@0x8a754
+    _device: indirect@0x8a762
+    _colorScheme: indirect@0x8a740
+    _signedstamp: indirect@0x90980
+
+== :.Stheno.SignedStamp  kind=16  @0x88918  fields=4
+    _showGallery: indirect@0x8c5e4
+    _loaded: indirect@0x8c5e4
+    _needActivate: indirect@0x8c5e4
+    _alertView: indirect@0x9127e
+
+== :.Stheno.UIApplicationHook  kind=16  @0x88a20  fields=0
+
+== :.Stheno.SpringBoardHook  kind=16  @0x88a80  fields=0
+
+== :.Stheno.SBApplicationHook  kind=16  @0x88ae8  fields=0
+
+== :.Stheno.SBIconControllerHook  kind=16  @0x88b48  fields=0
+
+== :.Stheno._SBFluidSwitcherPanGestureRecognizerHook  kind=16  @0x88ba8  fields=1
+    _handleClick: indirect@0x9134e
+
+== :.Stheno.SBGrabberTongueHook  kind=16  @0x88c38  fields=0
+
+== :.Stheno.SBFluidSwitcherGestureManagerHook  kind=16  @0x88c98  fields=0
+
+== :.Stheno.SBMainDisplaySceneManagerHook  kind=16  @0x88d10  fields=0
+
+== :.Stheno.UIApplicationSceneDeactivationManagerHook  kind=16  @0x88d70  fields=0
+
+== :.Stheno.FBSceneHook  kind=16  @0x88dd0  fields=0
+
+== :.Stheno.BNContentViewControllerHook  kind=16  @0x88e38  fields=0
+
+== :.Stheno.SBDeviceApplicationSceneViewControllerHook  kind=16  @0x88e98  fields=0
+
+== :.Stheno.SBApplicationControllerHook  kind=16  @0x88ef8  fields=0
+
+== :.Stheno.FBSceneManagerHook  kind=16  @0x88f58  fields=0
+
+== :.Stheno.FBSystemServiceHook  kind=16  @0x88fb8  fields=0
+
+== :.Stheno.UIStatusBarWindowHook  kind=16  @0x89018  fields=0
+
+== :.Stheno.ReflectKeyboardView  kind=17  @0x89080  fields=3
+    _device: indirect@0x8a762
+    interfaceOrientation: Int
+    view: UIView
+
+== :.Stheno.ReflectView  kind=17  @0x8909c  fields=4
+    _device: indirect@0x8a762
+    interfaceOrientation: Int
+    view: UIView
+    medusaed: Bool
+
+== :.Stheno.Dynamic  kind=17  @0x890b8  fields=1
+    id: yXlSg
+
+== :.Stheno.RelativeDirectRawPointer  kind=17  @0x890d4  fields=1
+    offset: indirect@0x9199a
+
+== :.Stheno.RelativeIndirectablePointer  kind=17  @0x890f0  fields=1
+    offset: indirect@0x9199a
+
+== :.Stheno.RelativeDirectPointer  kind=17  @0x89120  fields=1
+    offset: indirect@0x9199a
+
+== :.Stheno.RelativeIndirectableRawPointer  kind=17  @0x89150  fields=1
+    offset: indirect@0x9199a
+
+== :.Stheno.CArray  kind=17  @0x8916c  fields=1
+    first: x
+
+== :.Stheno.LoadCommandType  kind=18  @0x891c4  fields=0
+
+== :.Stheno.Meta  kind=16  @0x891e0  fields=1
+    pointer: UnsafeMutableRawPointer
+
+== :.Stheno.Proto  kind=16  @0x8930c  fields=1
+    pointer: Spy.z��G
+
+== :.Stheno.Conformance  kind=16  @0x89380  fields=1
+    pointer: Spy�y��G
+
+== :.Stheno.Descriptor.ProtocolConformance  kind=17  @0x893f4  fields=4
+    protocolDescriptor: 
+    _descriptor: :.Stheno.RelativeDirectRawPointer
+    witnessTablePattern: :.Stheno.RelativeDirectRawPointer
+    flags: :.Stheno.Flags.Conformance
+
+== :.Stheno.Descriptor  kind=18  @0x89410  fields=0
+
+== :.Stheno.Descriptor.Proto  kind=17  @0x8942c  fields=6
+    flags: :.Stheno.Flags.Descriptor.Proto
+    parent: indirect@0x91a20
+    name: indirect@0x91a2e
+    numberOfRequirementsInSignature: indirect@0x9199a
+    numberOfRequirements: indirect@0x9199a
+    associatedTypeNames: indirect@0x91a2e
+
+== :.Stheno.Meta.EnumCase  kind=17  @0x89448  fields=3
+    tagName: String
+    enumTag: indirect@0x919e4
+    type: UnsafeMutableRawPointer
+
+== :.Stheno.Meta.FieldRecord  kind=17  @0x89464  fields=3
+    name: String
+    type: UnsafeMutableRawPointer
+    offset: Int
+
+== :.Stheno.Kind.Meta  kind=18  @0x89480  fields=0
+
+== :.Stheno.Flags.Conformance  kind=17  @0x8949c  fields=1
+    value: indirect@0x919e4
+
+== :.Stheno.Descriptor.Context  kind=17  @0x894b8  fields=5
+    flags: :.Stheno.Flags.Descriptor.Context
+    parent: 
+    name: indirect@0x91a2e
+    accessFunctionPointer: :.Stheno.RelativeIndirectableRawPointer
+    fieldDescriptor: indirect@0x91aac
+
+== :.Stheno.Flags  kind=18  @0x894d4  fields=0
+
+== :.Stheno.Flags.Descriptor  kind=18  @0x894f0  fields=0
+
+== :.Stheno.Flags.Descriptor.Proto  kind=17  @0x8950c  fields=2
+    low16: indirect@0x91a72
+    high16: :.Stheno.Flags.FlagSet
+
+== :.Stheno.Descriptor.Field  kind=17  @0x89544  fields=6
+    type: :.Stheno.RelativeDirectRawPointer
+    superClass: :.Stheno.RelativeDirectRawPointer
+    _kind: indirect@0x91a72
+    fieldRecordSize: indirect@0x91ae0
+    count: indirect@0x9199a
+    fieldCArray: indirect@0x91ae6
+
+== :.Stheno.Flags.Descriptor.Context  kind=17  @0x89560  fields=2
+    low16: indirect@0x91a72
+    high16: :.Stheno.Flags.FlagSet
+
+== :.Stheno.Flags.FlagSet  kind=17  @0x8957c  fields=1
+    Bits: x
+
+== :.Stheno.Descriptor.Field.FieldRecord  kind=17  @0x895b8  fields=3
+    flags: indirect@0x9199a
+    symbolic: indirect@0x91afa
+    name: indirect@0x91a2e
+
+== :.Stheno.Ref  kind=16  @0x895d4  fields=2
+    meta: :.Stheno.Meta
+    pointer: UnsafeMutableRawPointer
+
+== :.Stheno.Heap  kind=16  @0x896e8  fields=1
+    allocated: UnsafeMutableRawPointer
+
+== :.Stheno.Value  kind=16  @0x89758  fields=1
+    value: x
+
+== :.Stheno.Module  kind=16  @0x89810  fields=3
+    path: String
+    base: UnsafeMutableRawPointer
+    slide: Int
+
+== _Glue.OrigType  kind=16  @0x8989c  fields=0
+
+== _Glue.SuprType  kind=16  @0x898f8  fields=0
+
+== _Glue.OrigType  kind=16  @0x89954  fields=0
+
+== _Glue.SuprType  kind=16  @0x899bc  fields=0
+
+== _Glue.OrigType  kind=16  @0x89a24  fields=0
+
+== _Glue.SuprType  kind=16  @0x89a80  fields=0
+
+== _Glue.OrigType  kind=16  @0x89adc  fields=0
+
+== _Glue.SuprType  kind=16  @0x89b38  fields=0
+
+== _Glue.OrigType  kind=16  @0x89b94  fields=0
+
+== _Glue.SuprType  kind=16  @0x89c14  fields=0
+
+== _Glue.OrigType  kind=16  @0x89c94  fields=0
+
+== _Glue.SuprType  kind=16  @0x89cf0  fields=0
+
+== _Glue.OrigType  kind=16  @0x89d4c  fields=0
+
+== _Glue.SuprType  kind=16  @0x89dcc  fields=0
+
+== _Glue.OrigType  kind=16  @0x89e4c  fields=0
+
+== _Glue.SuprType  kind=16  @0x89ea8  fields=0
+
+== _Glue.OrigType  kind=16  @0x89f04  fields=0
+
+== _Glue.SuprType  kind=16  @0x89f60  fields=0
+
+== _Glue.OrigType  kind=16  @0x89fbc  fields=0
+
+== _Glue.SuprType  kind=16  @0x8a024  fields=0
+
+== _Glue.OrigType  kind=16  @0x8a08c  fields=0
+
+== _Glue.SuprType  kind=16  @0x8a0e8  fields=0
+
+== _Glue.OrigType  kind=16  @0x8a144  fields=0
+
+== _Glue.SuprType  kind=16  @0x8a1a0  fields=0
+
+== _Glue.OrigType  kind=16  @0x8a1fc  fields=0
+
+== _Glue.SuprType  kind=16  @0x8a258  fields=0
+
+== _Glue.OrigType  kind=16  @0x8a2b4  fields=0
+
+== _Glue.SuprType  kind=16  @0x8a310  fields=0
+
+== _Glue.OrigType  kind=16  @0x8a36c  fields=0
+
+== _Glue.SuprType  kind=16  @0x8a3c8  fields=0
+
+== _Glue.OrigType  kind=16  @0x8a424  fields=0
+
+== _Glue.SuprType  kind=16  @0x8a48c  fields=0
+
+== _Glue  kind=18  @0x8a4f4  fields=0
+
+== _Glue  kind=18  @0x8a510  fields=0
+
+== _Glue  kind=18  @0x8a52c  fields=0
+
+== _Glue  kind=18  @0x8a548  fields=0
+
+== _Glue  kind=18  @0x8a564  fields=0
+
+== _Glue  kind=18  @0x8a580  fields=0
+
+== _Glue  kind=18  @0x8a59c  fields=0
+
+== _Glue  kind=18  @0x8a5b8  fields=0
+
+== _Glue  kind=18  @0x8a5d4  fields=0
+
+== _Glue  kind=18  @0x8a5f0  fields=0
+
+== _Glue  kind=18  @0x8a60c  fields=0
+
+== _Glue  kind=18  @0x8a628  fields=0
+
+== _Glue  kind=18  @0x8a644  fields=0
+
+== _Glue  kind=18  @0x8a660  fields=0
+
+== _Glue  kind=18  @0x8a67c  fields=0
+
+== _Glue  kind=18  @0x8a698  fields=0

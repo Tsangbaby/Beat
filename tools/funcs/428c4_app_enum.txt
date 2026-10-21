@@ -1,0 +1,151 @@
+0x0428c8  tbz        x16, #0x3e, #0x428d0
+0x0428cc  brk        #0xc471
+0x0428d0  b          #0x7edd0                                       ; IMP:_swift_bridgeObjectRetain
+0x0428d8  cmp        x8, x9
+0x0428e4  cmp        w8, #0
+0x0428f0  ret        
+0x042900  ret        
+0x042914  tbz        x16, #0x3e, #0x4291c
+0x042918  brk        #0xc471
+0x04291c  b          #0x7e080                                       ; IMP:_$s7SwiftUI5StateV12wrappedValueACyxGx_tcfC
+0x04293c  ret        
+0x04294c  ret        
+0x042958  ret        
+0x042968  tbz        x16, #0x3e, #0x42970
+0x04296c  brk        #0xc471
+0x042970  b          #0x7edb0                                       ; IMP:_swift_bridgeObjectRelease
+0x042980  tbz        x16, #0x3e, #0x42988
+0x042984  brk        #0xc471
+0x042988  b          #0x7f000                                       ; IMP:_swift_release
+0x042994  ret        
+0x0429ac  ret        
+0x0429c8  tbz        x16, #0x3e, #0x429d0
+0x0429cc  brk        #0xc471
+0x0429d0  b          #0x7d930                                       ; IMP:_$s7SwiftUI11StateObjectV12wrappedValuexvg
+0x0429e8  ret        
+0x0429f4  ret        
+0x042a0c  ret        
+0x042a24  ret        
+0x042a3c  ret        
+0x042a54  ret        
+0x042a6c  ret        
+0x042a7c  tbz        x16, #0x3e, #0x42a84
+0x042a80  brk        #0xc471
+0x042a84  b          #0x7f010                                       ; IMP:_swift_retain
+0x042a94  cmp        x8, #2
+0x042a9c  ret        
+0x042aac  tbz        x16, #0x3e, #0x42ab4
+0x042ab0  brk        #0xc471
+0x042ab4  b          #0x7f000                                       ; IMP:_swift_release
+0x042ac4  ret        
+0x042ad4  tbz        x16, #0x3e, #0x42adc
+0x042ad8  brk        #0xc471
+0x042adc  b          #0x7f000                                       ; IMP:_swift_release
+0x042aec  tbz        x16, #0x3e, #0x42af4
+0x042af0  brk        #0xc471
+0x042af4  b          #0x7f010                                       ; IMP:_swift_retain
+0x042b0c  tbz        x16, #0x3e, #0x42b14
+0x042b10  brk        #0xc471
+0x042b14  b          #0x7d7a0                                       ; IMP:_$s7Combine9PublishedV18_enclosingInstance7wrapped7storagexqd___s24ReferenceWritableKeyPathCyqd__xGAHyqd__ACyxGGtcRld__CluisZ
+0x042b2c  tbz        x16, #0x3e, #0x42b34
+0x042b30  brk        #0xc471
+0x042b34  b          #0x7d7a0                                       ; IMP:_$s7Combine9PublishedV18_enclosingInstance7wrapped7storagexqd___s24ReferenceWritableKeyPathCyqd__xGAHyqd__ACyxGGtcRld__CluisZ
+0x042b40  ret        
+0x042b58  tbz        x16, #0x3e, #0x42b60
+0x042b5c  brk        #0xc471
+0x042b60  b          #0x423ac                                       ; sub_423ac
+0x042b70  tbz        x16, #0x3e, #0x42b78
+0x042b74  brk        #0xc471
+0x042b78  b          #0x7f000                                       ; IMP:_swift_release
+0x042b8c  ret        
+0x042ba0  ret        
+0x042bb8  tbz        x16, #0x3e, #0x42bc0
+0x042bbc  brk        #0xc471
+0x042bc0  b          #0x7f010                                       ; IMP:_swift_retain
+0x042bcc  ret        
+0x042be0  bl         #0x4924c                                       ; sub_4924c
+0x042bec  bl         #0x7ed20                                       ; IMP:_swift_allocObject
+0x042bf8  add        x1, x1, #0xd08                                 ; __objc_data+0x18d0
+0x042c00  add        x2, x2, #0x630                                 ; __objc_const+0x2000
+0x042c08  bl         #0x4943c                                       ; sub_4943c
+0x042c14  ldr        x0, [x0, #0x2d8]                               ; GOT(__swiftEmptyArrayStorage)
+0x042c1c  ldr        x1, [x1, #0x1a8]                               ; GOT(_$sSSN)
+0x042c24  ldr        x3, [x3, #0x1b0]                               ; GOT(_$sSSSHsWP)
+0x042c28  bl         #0x7e310                                       ; IMP:_$sSD17dictionaryLiteralSDyxq_Gx_q_td_tcfC
+0x042c34  str        x19, [x8, #0xcf0]                              ; __common+0x1b0
+0x042c40  retab      
+0x042c68  cmp        x0, x4
+0x042c80  bl         #0x7e830                                       ; IMP:_$ss27_stringCompareWithSmolCheck__9expectingSbs11_StringGutsV_ADs01_G16ComparisonResultOtF
+0x042c8c  tbz        w8, #0, #0x42cd4
+0x042c90  cmp        x22, x20
+0x042cc4  tbz        x16, #0x3e, #0x42ccc
+0x042cc8  brk        #0xc471
+0x042ccc  b          #0x7e830                                       ; IMP:_$ss27_stringCompareWithSmolCheck__9expectingSbs11_StringGutsV_ADs01_G16ComparisonResultOtF
+0x042ce0  retab      
+0x042cec  b          #0x7edd0                                       ; IMP:_swift_bridgeObjectRetain
+0x042d08  b          #0x42c44                                       ; sub_42c44
+0x042d34  add        x0, x0, #0x40                                  ; __const[_$sSQMp]
+0x042d40  bl         #0x7ed20                                       ; IMP:_swift_allocObject
+0x042d4c  ldr        x8, [x8, #0x2d8]                               ; GOT(__swiftEmptyArrayStorage)
+0x042d5c  add        x16, x16, #0x4b0                               ; __text+0x41000
+0x042d74  ldr        x16, [x16, #0x2c8]                             ; GOT(__NSConcreteStackBlock)
+0x042d8c  ldr        d0, [x9, #0xcf0]                               ; __const+0x250
+0x042d9c  add        x16, x16, #0x3b8                               ; __text+0x3b000
+0x042da8  add        x8, x8, #0x58                                  ; __const[_$sSQMp]
+0x042db4  bl         #0x7e9d0                                       ; IMP:__Block_copy
+0x042dc4  bl         #0x7f010                                       ; IMP:_swift_retain
+0x042dcc  bl         #0x7f000                                       ; IMP:_swift_release
+0x042dd4  ldr        x8, [x8, #0x580]                               ; __data+0x50
+0x042dd8  cmn        x8, #1
+0x042de4  ldr        x24, [x8, #0xc20]                              ; __common+0xe0
+0x042dec  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x042df4  add        x8, x8, #0x2f0                                 ; __cstring+0xd30
+0x042e1c  bl         #0x597d0                                       ; sub_597d0
+0x042e28  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x042e30  bl         #0x7e9d0                                       ; IMP:__Block_copy
+0x042e3c  add        x8, x8, #0x310                                 ; __cstring+0xd30
+0x042e58  bl         #0x59864                                       ; sub_59864
+0x042e60  bl         #0x7e9e0                                       ; IMP:__Block_release
+0x042e74  bl         #0x7eda0                                       ; IMP:_swift_beginAccess
+0x042e88  bl         #0x7ede0                                       ; IMP:_swift_bridgeObjectRetain_n
+0x042e94  bl         #0x48420                                       ; sub_48420
+0x042e98  cbnz       x21, #0x42efc
+0x042ea0  bl         #0x7edb0                                       ; IMP:_swift_bridgeObjectRelease
+0x042ea8  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x042eb0  bl         #0x7e9e0                                       ; IMP:__Block_release
+0x042eb8  bl         #0x7f000                                       ; IMP:_swift_release
+0x042ed8  retab      
+0x042ee0  add        x0, x0, #0x580                                 ; __objc_data+0x18d0
+0x042ee8  add        x16, x16, #0x510                               ; __text+0x24000
+0x042ef4  bl         #0x7eff0                                       ; IMP:_swift_once
+0x042ef8  b          #0x42de0                                       ; sub_42de0
+0x042f00  bl         #0x7f000                                       ; IMP:_swift_release
+0x042f04  brk        #1
+0x042f38  ldr        x8, [x8, #0x2d0]                               ; GOT(___stack_chk_guard)
+0x042f44  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x042f68  bl         #0x7d510                                       ; IMP:_$s10ObjectiveC8SelectorVyACSScfC
+0x042f74  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x042f7c  ldr        x1, [x22, #0x4c8]                              ; SELREF("performSelector:")
+0x042f84  bl         #0x7ec20                                       ; IMP:_objc_msgSend
+0x042f90  bl         #0x7ebf0                                       ; IMP:_objc_autorelease
+0x042f9c  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x042fa0  bl         #0x59e54                                       ; sub_59e54
+0x042fb0  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x042fb4  cbz        x19, #0x43160
+0x042fcc  add        x8, x8, #0x340                                 ; __cstring+0xd30
+0x042fd8  bl         #0x7d510                                       ; IMP:_$s10ObjectiveC8SelectorVyACSScfC
+0x042fe4  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x042fe8  ldr        x1, [x22, #0x4c8]                              ; SELREF("performSelector:")
+0x042ff0  bl         #0x7ec20                                       ; IMP:_objc_msgSend
+0x042ffc  bl         #0x7ebf0                                       ; IMP:_objc_autorelease
+0x043008  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x04300c  bl         #0x59e54                                       ; sub_59e54
+0x04301c  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x043020  cbz        x21, #0x431ac
+0x043034  add        x9, x9, #0x360                                 ; __cstring+0xd30
+0x043048  bl         #0x1264c                                       ; sub_1264c
+0x043054  ldr        x1, [x1, #0x1a8]                               ; GOT(_$sSSN)
+0x04306c  bl         #0x7e630                                       ; IMP:_$sSy10FoundationE8containsySbqd__SyRd__lF
+0x043070  tbnz       w0, #0, #0x430b0
+0x04307c  add        x8, x8, #0x380                                 ; __cstring+0xd30
+0x043090  ldr        x1, [x1, #0x1a8]                               ; GOT(_$sSSN)

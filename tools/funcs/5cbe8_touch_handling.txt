@@ -1,0 +1,272 @@
+0x05cbf8  b          #0x5cf5c                                       ; sub_5cf5c
+0x05cc28  bl         #0x5bc00                                       ; sub_5bc00
+0x05cc34  add        x0, x0, #0x768                                 ; __data->0xa69f2
+0x05cc3c  add        x16, x16, #0xc00                               ; __text+0x53000
+0x05cc50  add        x16, x16, #0xf90                               ; __const+0x2560
+0x05cc60  bl         #0x63aac                                       ; sub_63aac
+0x05cc6c  bl         #0x7d610                                       ; IMP:_$s5Orion17ClassHookProtocolP6target6TargetQzvgTj
+0x05cc70  bl         #0x658e4                                       ; sub_658e4
+0x05cc74  bl         #0x6539c                                       ; sub_6539c
+0x05cc78  bl         #0x65528                                       ; sub_65528
+0x05cc7c  bl         #0x657b0                                       ; sub_657b0
+0x05cc80  bl         #0x72724                                       ; sub_72724
+0x05cc88  bl         #0x7f000                                       ; IMP:_swift_release
+0x05cc90  ldr        x21, [x8, #0xd40]                              ; __common+0x200
+0x05cc94  cbz        x21, #0x5cd38
+0x05cc9c  ldr        x23, [x8, #0xd48]                              ; __common+0x208
+0x05cca4  bl         #0x7ef30                                       ; IMP:_swift_getObjectType
+0x05ccb8  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x05ccbc  bl         #0x656dc                                       ; sub_656dc
+0x05ccc8  cmp        w8, #2
+0x05ccd0  bl         #0x656dc                                       ; sub_656dc
+0x05cce0  ldr        x9, [x8, #0x28]!                               ; __bss+0x4c68
+0x05cd00  bl         #0x7edd0                                       ; IMP:_swift_bridgeObjectRetain
+0x05cd04  bl         #0x2aef4                                       ; sub_2aef4
+0x05cd10  bl         #0x7edb0                                       ; IMP:_swift_bridgeObjectRelease
+0x05cd14  cbz        x20, #0x5cd50
+0x05cd1c  ldr        x1, [x8, #0x5b8]                               ; SELREF("tapCount")
+0x05cd24  bl         #0x7ec20                                       ; IMP:_objc_msgSend
+0x05cd30  bl         #0x7ec50                                       ; IMP:_objc_release
+0x05cd34  b          #0x5cd54                                       ; sub_5cd54
+0x05cd4c  retab      
+0x05cd58  ldr        x9, [x8, #8]!                                  ; __objc_const+0x2008
+0x05cd74  tbnz       w0, #0, #0x5cde0
+0x05cd80  bl         #0x7d590                                       ; IMP:_$s5Orion010_ClassHookB0C6targetxvg
+0x05cd8c  cbz        w25, #0x5cdb4
+0x05cd90  ldr        x9, [x8, #0x68]!                               ; __objc_const+0x2068
+0x05cdb0  b          #0x5cdd8                                       ; sub_5cdd8
+0x05cdb4  ldr        x9, [x8, #0x78]!                               ; __objc_const+0x2078
+0x05cddc  bl         #0x7ec50                                       ; IMP:_objc_release
+0x05ce00  tbz        x16, #0x3e, #0x5ce08
+0x05ce04  brk        #0xc471
+0x05ce08  b          #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x05ce10  add        x16, x16, #0xbfc                               ; __text+0x54000
+0x05ce20  b          #0x5cf5c                                       ; sub_5cf5c
+0x05ce48  bl         #0x5bc00                                       ; sub_5bc00
+0x05ce54  add        x0, x0, #0x768                                 ; __data->0xa69f2
+0x05ce5c  add        x16, x16, #0xc00                               ; __text+0x53000
+0x05ce70  add        x16, x16, #0xf90                               ; __const+0x2560
+0x05ce80  bl         #0x63aac                                       ; sub_63aac
+0x05ce84  bl         #0x657d8                                       ; sub_657d8
+0x05ce88  bl         #0x658e4                                       ; sub_658e4
+0x05ce8c  bl         #0x6539c                                       ; sub_6539c
+0x05ce90  bl         #0x65528                                       ; sub_65528
+0x05ce94  bl         #0x655a4                                       ; sub_655a4
+0x05ce98  bl         #0x72768                                       ; sub_72768
+0x05cea0  bl         #0x7f000                                       ; IMP:_swift_release
+0x05cea8  ldr        x20, [x8, #0xd40]                              ; __common+0x200
+0x05ceac  cbz        x20, #0x5cf30
+0x05ceb4  ldr        x19, [x8, #0xd48]                              ; __common+0x208
+0x05cebc  bl         #0x7ef30                                       ; IMP:_swift_getObjectType
+0x05ced0  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x05cef0  ldr        x9, [x8, #0x70]!                               ; __bss+0x4cb0
+0x05cf24  tbz        x16, #0x3e, #0x5cf2c
+0x05cf28  brk        #0xc471
+0x05cf2c  b          #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x05cf40  retab      
+0x05cf48  add        x16, x16, #0xe24                               ; __text+0x54000
+0x05cf58  b          #0x5cf5c                                       ; sub_5cf5c
+0x05cf8c  add        x23, x23, #0x560                               ; __data->0x3ba00027af0
+0x05cf94  add        x24, x24, #0x698                               ; __objc_const+0x2000
+0x05cfa4  bl         #0x651a4                                       ; sub_651a4
+0x05cfb0  add        x0, x0, #0x7f8                                 ; __data->0xa69f2
+0x05cfbc  bl         #0x6443c                                       ; sub_6443c
+0x05cfcc  bl         #0x7e560                                       ; IMP:_$sSh10FoundationE36_unconditionallyBridgeFromObjectiveCyShyxGSo5NSSetCSgFZ
+0x05cfd8  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x05cfe4  bl         #0x7f010                                       ; IMP:_swift_retain
+0x05d000  bl         #0x7ec50                                       ; IMP:_objc_release
+0x05d008  bl         #0x7f000                                       ; IMP:_swift_release
+0x05d02c  tbz        x16, #0x3e, #0x5d034
+0x05d030  brk        #0xc471
+0x05d034  b          #0x7edb0                                       ; IMP:_swift_bridgeObjectRelease
+0x05d048  bl         #0x65804                                       ; sub_65804
+0x05d04c  bl         #0x6541c                                       ; sub_6541c
+0x05d050  bl         #0x5d060                                       ; sub_5d060
+0x05d05c  retab      
+0x05d06c  bl         #0x65698                                       ; sub_65698
+0x05d088  add        x0, x0, #0x7c8                                 ; __data->0xa69f2
+0x05d08c  bl         #0x86a8                                        ; sub_86a8
+0x05d094  bl         #0x652e0                                       ; sub_652e0
+0x05d0b8  add        x17, x17, #0x368                               ; GOT(_$s7SwiftUI16RoundedRectangleVMa)
+0x05d0bc  ldr        x16, [x17]                                     ; __auth_ptr(___chkstk_darwin)
+0x05d0c4  bl         #0x655cc                                       ; sub_655cc
+0x05d0d4  add        x0, x0, #0x7d0                                 ; __data->0xa69f2
+0x05d0d8  bl         #0x86a8                                        ; sub_86a8
+0x05d0e0  bl         #0x652e0                                       ; sub_652e0
+0x05d104  add        x17, x17, #0x368                               ; GOT(_$s7SwiftUI16RoundedRectangleVMa)
+0x05d108  ldr        x16, [x17]                                     ; __auth_ptr(___chkstk_darwin)
+0x05d110  bl         #0x65478                                       ; sub_65478
+0x05d118  ldr        x8, [x8, #0x270]                               ; __data+0x3d40
+0x05d128  ldr        x8, [x8, #0xf40]                               ; GOT(_$s5Orion8PropertyV9AtomicityO9nonatomicyAEyx_GAGmlFWC)
+0x05d14c  bl         #0x7f010                                       ; IMP:_swift_retain
+0x05d154  ldr        x2, [x2, #0x1e0]                               ; GOT(_$sSbN)
+0x05d164  bl         #0x7d700                                       ; IMP:_$s5Orion8PropertyV12wrappedValue_ACyxGx_AC9AtomicityOyx_GtcfC
+0x05d188  bl         #0x7f000                                       ; IMP:_swift_release
+0x05d190  bl         #0x7d580                                       ; IMP:_$s5Orion010_ClassHookB0C6targetACyxGx_tcfc
+0x05d1a0  bl         #0x653d8                                       ; f_653d8
+0x05d1a8  retab      
+0x05d1c4  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x05d1c8  bl         #0x5d060                                       ; sub_5d060
+0x05d1d4  retab      
+0x05d1ec  ldr        x8, [x8, #0x270]                               ; __data+0x3d40
+0x05d1f8  add        x0, x0, #0x7d0                                 ; __data->0xa69f2
+0x05d1fc  bl         #0x86a8                                        ; sub_86a8
+0x05d234  tbz        x16, #0x3e, #0x5d23c
+0x05d238  brk        #0xc471
+0x05d244  braa       x2, x16
+0x05d258  bl         #0x7d5a0                                       ; IMP:_$s5Orion010_ClassHookB0Cfd
+0x05d264  ldr        x8, [x8, #0x270]                               ; __data+0x3d40
+0x05d268  add        x20, x0, x8                                    ; __data+0x42a0
+0x05d270  add        x0, x0, #0x7d0                                 ; __data->0xa69f2
+0x05d274  bl         #0x86a8                                        ; sub_86a8
+0x05d29c  bl         #0x653cc                                       ; sub_653cc
+0x05d2bc  cmp        x16, x17
+0x05d2c4  brk        #0xc472
+0x05d2e4  tbz        x16, #0x3e, #0x5d2ec
+0x05d2e8  brk        #0xc471
+0x05d2ec  b          #0x7ee00                                       ; IMP:_swift_deallocClassInstance
+0x05d304  ldr        x0, [x9, #0x2b0]                               ; __data+0x3d80
+0x05d308  cbz        x0, #0x5d314
+0x05d310  b          #0x5d334                                       ; sub_5d334
+0x05d318  ldr        x1, [x1, #0x1e0]                               ; GOT(_$sSbN)
+0x05d320  bl         #0x7d730                                       ; IMP:_$s5Orion8PropertyVMa
+0x05d324  cbnz       x1, #0x5d334
+0x05d32c  add        x8, x8, #0x2b0                                 ; __data->0xa69f2
+0x05d338  retab      
+0x05d340  b          #0x5bc00                                       ; sub_5bc00
+0x05d348  add        x1, x1, #0x2d0                                 ; __data->0xa69f2
+0x05d350  add        x16, x16, #0xc38                               ; __constg_swiftt+0x13d8
+0x05d360  b          #0x63438                                       ; sub_63438
+0x05d368  add        x3, x3, #0xe18                                 ; __bss+0x4c40
+0x05d36c  b          #0x63478                                       ; sub_63478
+0x05d370  b          #0x7d620                                       ; IMP:_$s5Orion17ClassHookProtocolPAAE10targetNameSSvgZ
+0x05d374  b          #0x7d630                                       ; IMP:_$s5Orion17ClassHookProtocolPAAE12subclassModeAA08SubclassF0OvgZ
+0x05d378  b          #0x7d660                                       ; IMP:_$s5Orion17ClassHookProtocolPAAE9protocolsSaySo0D0CGvgZ
+0x05d37c  b          #0x7d590                                       ; IMP:_$s5Orion010_ClassHookB0C6targetxvg
+0x05d380  b          #0x7d570                                       ; IMP:_$s5Orion010_ClassHookB0C6targetACyxGx_tcfCTj
+0x05d384  b          #0x7d640                                       ; IMP:_$s5Orion17ClassHookProtocolPAAE13deinitializerAA12DeinitPolicyOyF
+0x05d38c  add        x3, x3, #0x768                                 ; __data->0xa69f2
+0x05d394  add        x16, x16, #0xc00                               ; __text+0x53000
+0x05d3a8  add        x16, x16, #0xc00                               ; __text+0x53000
+0x05d3bc  add        x16, x16, #0xf90                               ; __const+0x2560
+0x05d3cc  b          #0x63940                                       ; sub_63940
+0x05d3d0  b          #0x7d6d0                                       ; IMP:_$s5Orion7AnyHookPAAE16hookWillActivateSbyFZ
+0x05d3d4  b          #0x7d6c0                                       ; IMP:_$s5Orion7AnyHookPAAE15hookDidActivateyyFZ
+0x05d3f4  bl         #0x65688                                       ; sub_65688
+0x05d3fc  ldr        x8, [x8, #0x5f8]                               ; __data+0xc8
+0x05d400  cmn        x8, #1
+0x05d40c  add        x20, x20, #0xd30                               ; __bss+0x4c40
+0x05d414  bl         #0x65368                                       ; sub_65368
+0x05d418  bl         #0x65404                                       ; sub_65404
+0x05d41c  bl         #0x4f450                                       ; sub_4f450
+0x05d428  bl         #0x7f000                                       ; IMP:_swift_release
+0x05d42c  tbz        w23, #0, #0x5d438
+0x05d434  b          #0x5d4a0                                       ; sub_5d4a0
+0x05d43c  bl         #0x5d344                                       ; sub_5d344
+0x05d448  add        x0, x0, #0x770                                 ; __data->0xa69f2
+0x05d450  add        x16, x16, #0x344                               ; __text+0x55000
+0x05d464  add        x16, x16, #0xed8                               ; __const+0x2560
+0x05d474  bl         #0x63aac                                       ; sub_63aac
+0x05d478  bl         #0x6571c                                       ; sub_6571c
+0x05d47c  bl         #0x65454                                       ; sub_65454
+0x05d480  bl         #0x797e0                                       ; sub_797e0
+0x05d484  bl         #0x6539c                                       ; sub_6539c
+0x05d488  bl         #0x6534c                                       ; sub_6534c
+0x05d48c  bl         #0x655a4                                       ; sub_655a4
+0x05d490  bl         #0x732c4                                       ; sub_732c4
+0x05d49c  bl         #0x7f000                                       ; IMP:_swift_release
+0x05d4b8  retab      
+0x05d4c0  add        x0, x0, #0x5f8                                 ; __objc_data+0x18d0
+0x05d4c8  add        x16, x16, #0x1b0                               ; __text+0x47000
+0x05d4d4  bl         #0x7eff0                                       ; IMP:_swift_once
+0x05d4d8  b          #0x5d408                                       ; sub_5d408
+0x05d4e0  add        x16, x16, #0x3d8                               ; __text+0x55000
+0x05d4f0  b          #0x5d918                                       ; sub_5d918
+0x05d4f4  b          #0x638a8                                       ; sub_638a8
+0x05d4fc  b          #0x5d344                                       ; sub_5d344
+0x05d504  add        x1, x1, #0x320                                 ; __data->0xa69f2
+0x05d50c  add        x16, x16, #0xc98                               ; __constg_swiftt+0x13d8
+0x05d51c  b          #0x63438                                       ; sub_63438
+0x05d524  add        x3, x3, #0xe28                                 ; __bss+0x4c40
+0x05d528  b          #0x63478                                       ; sub_63478
+0x05d52c  b          #0x7d620                                       ; IMP:_$s5Orion17ClassHookProtocolPAAE10targetNameSSvgZ
+0x05d530  b          #0x7d630                                       ; IMP:_$s5Orion17ClassHookProtocolPAAE12subclassModeAA08SubclassF0OvgZ
+0x05d534  b          #0x7d660                                       ; IMP:_$s5Orion17ClassHookProtocolPAAE9protocolsSaySo0D0CGvgZ
+0x05d538  b          #0x7d590                                       ; IMP:_$s5Orion010_ClassHookB0C6targetxvg
+0x05d53c  b          #0x7d570                                       ; IMP:_$s5Orion010_ClassHookB0C6targetACyxGx_tcfCTj
+0x05d540  b          #0x7d640                                       ; IMP:_$s5Orion17ClassHookProtocolPAAE13deinitializerAA12DeinitPolicyOyF
+0x05d548  add        x3, x3, #0x770                                 ; __data->0xa69f2
+0x05d550  add        x16, x16, #0x344                               ; __text+0x55000
+0x05d564  add        x16, x16, #0x344                               ; __text+0x55000
+0x05d578  add        x16, x16, #0xed8                               ; __const+0x2560
+0x05d588  b          #0x63940                                       ; sub_63940
+0x05d58c  b          #0x7d6d0                                       ; IMP:_$s5Orion7AnyHookPAAE16hookWillActivateSbyFZ
+0x05d590  b          #0x7d6c0                                       ; IMP:_$s5Orion7AnyHookPAAE15hookDidActivateyyFZ
+0x05d5bc  bl         #0x65688                                       ; sub_65688
+0x05d5c4  ldr        x20, [x25, #0xd40]                             ; __common+0x200
+0x05d5c8  cbz        x20, #0x5d620
+0x05d5d0  ldr        x23, [x8, #0xd48]                              ; __common+0x208
+0x05d5d8  bl         #0x7ef30                                       ; IMP:_swift_getObjectType
+0x05d5ec  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x05d60c  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x05d610  cmp        w23, #1
+0x05d61c  b          #0x5d878                                       ; sub_5d878
+0x05d624  b          #0x5d62c                                       ; sub_5d62c
+0x05d628  ldr        x0, [x25, #0xd40]                              ; __common+0x200
+0x05d630  add        x26, x26, #0xd40                               ; __bss+0x4c40
+0x05d638  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x05d640  ldr        x8, [x8, #0x608]                               ; __data+0xd8
+0x05d644  cmn        x8, #1
+0x05d650  add        x20, x20, #0xd50                               ; __bss+0x4c40
+0x05d658  bl         #0x65368                                       ; sub_65368
+0x05d65c  bl         #0x65404                                       ; sub_65404
+0x05d660  bl         #0x4be14                                       ; sub_4be14
+0x05d66c  bl         #0x7f000                                       ; IMP:_swift_release
+0x05d670  tbz        w23, #0, #0x5d80c
+0x05d678  ldr        x8, [x8, #0x5f8]                               ; __data+0xc8
+0x05d67c  cmn        x8, #1
+0x05d688  add        x20, x20, #0xd30                               ; __bss+0x4c40
+0x05d690  bl         #0x65368                                       ; sub_65368
+0x05d694  bl         #0x65404                                       ; sub_65404
+0x05d698  bl         #0x4f450                                       ; sub_4f450
+0x05d6a4  bl         #0x7f000                                       ; IMP:_swift_release
+0x05d6a8  tbnz       w23, #0, #0x5d80c
+0x05d6ac  cbz        x19, #0x5d80c
+0x05d6b4  ldr        x0, [x8, #0x698]                               ; CLASSREF(UITouch)
+0x05d6b8  bl         #0x7ec40                                       ; IMP:_objc_opt_self
+0x05d6c4  bl         #0x7ee40                                       ; IMP:_swift_dynamicCastObjCClass
+0x05d6c8  cbz        x0, #0x5d80c
+0x05d6cc  bl         #0x6541c                                       ; sub_6541c
+0x05d6d0  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x05d6dc  ldr        x1, [x8, #0x600]                               ; SELREF("view")
+0x05d6e4  bl         #0x7ec20                                       ; IMP:_objc_msgSend
+0x05d6ec  bl         #0x7ec80                                       ; IMP:_objc_retainAutoreleasedReturnValue
+0x05d6f0  cbz        x0, #0x5d71c
+0x05d6fc  ldr        x1, [x8, #0x610]                               ; SELREF("window")
+0x05d700  bl         #0x7ec20                                       ; IMP:_objc_msgSend
+0x05d708  bl         #0x7ec80                                       ; IMP:_objc_retainAutoreleasedReturnValue
+0x05d714  bl         #0x7ec50                                       ; IMP:_objc_release
+0x05d718  b          #0x5d720                                       ; sub_5d720
+0x05d724  ldr        x1, [x8, #0x470]                               ; SELREF("locationInView:")
+0x05d730  bl         #0x7ec20                                       ; IMP:_objc_msgSend
+0x05d740  bl         #0x7ec50                                       ; IMP:_objc_release
+0x05d748  ldr        x20, [x25, #0xd50]                             ; __common+0x210
+0x05d750  bl         #0x7f010                                       ; IMP:_swift_retain
+0x05d75c  bl         #0x4ce60                                       ; sub_4ce60
+0x05d768  bl         #0x7f000                                       ; IMP:_swift_release
+0x05d76c  tbz        w24, #0, #0x5d7b0
+0x05d774  ldr        x8, [x8, #0x5d0]                               ; __data+0xa0
+0x05d778  cmn        x8, #1
+0x05d784  add        x19, x19, #0xc78                               ; __bss+0x4c40
+0x05d790  bl         #0x65384                                       ; f_65384
+0x05d794  ldr        x0, [x19]                                      ; __common+0x138
+0x05d798  ldr        x19, [x26]                                     ; __common+0x200
+0x05d7a0  add        x8, x8, #0xa48                                 ; __const->0x686000883f4
+0x05d7a8  bl         #0x7f010                                       ; IMP:_swift_retain
+0x05d7ac  b          #0x5d7ec                                       ; sub_5d7ec
+0x05d7b0  ldr        x24, [x25, #0xd50]                             ; __common+0x210
+0x05d7b8  bl         #0x7f010                                       ; IMP:_swift_retain
+0x05d7c8  bl         #0x4cf28                                       ; sub_4cf28
+0x05d7d4  bl         #0x7f000                                       ; IMP:_swift_release
+0x05d7d8  cbz        x20, #0x5d804
+0x05d7dc  ldr        x19, [x26]                                     ; __common+0x200

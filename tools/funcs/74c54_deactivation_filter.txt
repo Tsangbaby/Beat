@@ -1,0 +1,189 @@
+0x074c74  tbz        x16, #0x3e, #0x74c7c
+0x074c78  brk        #0xc471
+0x074c7c  b          #0x7ec50                                       ; IMP:_objc_release
+0x074c84  add        x0, x0, #0x700                                 ; __objc_data+0x18d0
+0x074c8c  add        x16, x16, #0xf94                               ; __text+0x6c000
+0x074c98  bl         #0x7eff0                                       ; IMP:_swift_once
+0x074c9c  b          #0x74c44                                       ; sub_74c44
+0x074ca4  add        x16, x16, #0xc04                               ; __text+0x6c000
+0x074cb4  b          #0x74e4c                                       ; sub_74e4c
+0x074cb8  b          #0x787a4                                       ; sub_787a4
+0x074cec  bl         #0x7bba8                                       ; sub_7bba8
+0x074cf8  add        x0, x0, #0xe0                                  ; __data+0x5ad0
+0x074cfc  bl         #0x86a8                                        ; sub_86a8
+0x074d10  add        x0, x0, #0xe8                                  ; __data+0x5ad0
+0x074d18  add        x16, x16, #0x94c                               ; __text+0x71000
+0x074d2c  add        x16, x16, #0x558                               ; __const+0x4560
+0x074d3c  bl         #0x79e1c                                       ; sub_79e1c
+0x074d48  ldr        x8, [x8, #0x288]                               ; GOT(_$sytN)
+0x074d54  add        x16, x16, #0x6f4                               ; __text+0x73000
+0x074d64  bl         #0x7bd28                                       ; sub_7bd28
+0x074d80  retab      
+0x074db4  ldr        x6, [x0]                                       ; __data+0x5bb8
+0x074dbc  ldr        x8, [x8, #0x700]                               ; __data+0x1d0
+0x074dc0  cmn        x8, #1
+0x074dcc  ldr        x1, [x8, #0x390]                               ; __data+0x4e60
+0x074e00  tbz        x16, #0x3e, #0x74e08
+0x074e04  brk        #0xc471
+0x074e10  add        x0, x0, #0x700                                 ; __objc_data+0x18d0
+0x074e18  add        x16, x16, #0xf94                               ; __text+0x6c000
+0x074e28  bl         #0x7eff0                                       ; IMP:_swift_once
+0x074e30  b          #0x74dc8                                       ; sub_74dc8
+0x074e38  add        x16, x16, #0xcbc                               ; __text+0x6c000
+0x074e48  b          #0x74e4c                                       ; sub_74e4c
+0x074e80  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x074e8c  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x074e98  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x074ea4  bl         #0x7f010                                       ; IMP:_swift_retain
+0x074ec8  bl         #0x7ec50                                       ; IMP:_objc_release
+0x074ed0  bl         #0x7ec50                                       ; IMP:_objc_release
+0x074ed8  bl         #0x7ec50                                       ; IMP:_objc_release
+0x074efc  tbz        x16, #0x3e, #0x74f04
+0x074f00  brk        #0xc471
+0x074f04  b          #0x7f000                                       ; IMP:_swift_release
+0x074f08  b          #0x787a4                                       ; sub_787a4
+0x074f1c  bl         #0x63ed0                                       ; sub_63ed0
+0x074f28  add        x0, x0, #0xff8                                 ; __const->0x3bf00064fbc
+0x074f30  bl         #0x7d5e0                                       ; IMP:_$s5Orion14_GlueClassHookPAAE17initializeStorageAA01_bcdF0CyFZ
+0x074f38  str        x0, [x8, #0xf10]                               ; __common+0x3d0
+0x074f44  retab      
+0x074f58  ldr        x8, [x8, #0x6f8]                               ; __data+0x1c8
+0x074f5c  cmn        x8, #1
+0x074f68  add        x0, x0, #0xf10                                 ; __bss+0x4c40
+0x074f70  retab      
+0x074f78  add        x0, x0, #0x6f8                                 ; __objc_data+0x18d0
+0x074f80  add        x16, x16, #0xf0c                               ; __text+0x6c000
+0x074f8c  bl         #0x7eff0                                       ; IMP:_swift_once
+0x074f90  b          #0x74f64                                       ; sub_74f64
+0x074f98  ldr        x8, [x8, #0x2d0]                               ; SELREF("_setDeactivationReasons:onScene:withSettings:reason:")
+0x074fa0  str        x8, [x9, #0x390]                               ; __data+0x4e60
+0x074fa4  ret        
+0x074fd8  bl         #0x5e824                                       ; sub_5e824
+0x074fdc  ldr        w1, [x0, #0x30]                                ; 0x30
+0x074fe0  ldrh       w2, [x0, #0x34]                                ; 0x34
+0x074fe4  bl         #0x7ed20                                       ; IMP:_swift_allocObject
+0x074ff0  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x074ff8  bl         #0x7d580                                       ; IMP:_$s5Orion010_ClassHookB0C6targetACyxGx_tcfc
+0x075000  ldr        x16, [x0]                                      ; 0x0
+0x075018  cmp        x16, x17
+0x075020  brk        #0xc472
+0x075028  add        x8, x8, #0xe48                                 ; __bss+0x4c40
+0x07502c  ldr        x8, [x8]                                       ; __common+0x308
+0x075070  tbz        x16, #0x3e, #0x75078
+0x075074  brk        #0xc471
+0x075078  b          #0x7f000                                       ; IMP:_swift_release
+0x0750ac  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x0750b8  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x0750c4  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x0750d0  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x0750f0  bl         #0x74fa8                                       ; sub_74fa8
+0x0750f8  bl         #0x7ec50                                       ; IMP:_objc_release
+0x075100  bl         #0x7ec50                                       ; IMP:_objc_release
+0x075108  bl         #0x7ec50                                       ; IMP:_objc_release
+0x07512c  tbz        x16, #0x3e, #0x75134
+0x075130  brk        #0xc471
+0x075134  b          #0x7ec50                                       ; IMP:_objc_release
+0x075154  ldr        x8, [x8, #0x700]                               ; __data+0x1d0
+0x075158  cmn        x8, #1
+0x075164  ldr        x19, [x8, #0x390]                              ; __data+0x4e60
+0x07516c  ldr        x8, [x8, #0x398]                               ; __data->0x7507c
+0x075178  add        x0, x0, #0xff8                                 ; __data[_swift_deletedMethodError]
+0x07517c  bl         #0x86a8                                        ; sub_86a8
+0x075188  add        x16, x16, #0x520                               ; __text+0x73000
+0x075198  bl         #0x7bbbc                                       ; sub_7bbbc
+0x0751a8  retab      
+0x0751b0  add        x0, x0, #0x700                                 ; __objc_data+0x18d0
+0x0751b8  add        x16, x16, #0xf94                               ; __text+0x6c000
+0x0751c4  bl         #0x7eff0                                       ; IMP:_swift_once
+0x0751c8  b          #0x75160                                       ; sub_75160
+0x0751d8  bl         #0x74f48                                       ; sub_74f48
+0x0751e0  ldr        x0, [x8, #0xf10]                               ; __common+0x3d0
+0x0751f0  tbz        x16, #0x3e, #0x751f8
+0x0751f4  brk        #0xc471
+0x0751f8  b          #0x7f010                                       ; IMP:_swift_retain
+0x0751fc  b          #0x75138                                       ; sub_75138
+0x075220  bl         #0x63ed0                                       ; sub_63ed0
+0x075248  tbz        x16, #0x3e, #0x75250
+0x07524c  brk        #0xc471
+0x075250  b          #0x7d5f0                                       ; IMP:_$s5Orion14_GlueClassHookPAAE8activate2inSayAA0D10DescriptorOGAA5Tweak_pXp_tFZ
+0x075268  bl         #0x63ed0                                       ; sub_63ed0
+0x075284  tbz        x16, #0x3e, #0x7528c
+0x075288  brk        #0xc471
+0x07528c  b          #0x7d5d0                                       ; IMP:_$s5Orion14_GlueClassHookPAAE16hookWillActivateSbyFZ
+0x0752a4  bl         #0x63ed0                                       ; sub_63ed0
+0x0752c0  tbz        x16, #0x3e, #0x752c8
+0x0752c4  brk        #0xc471
+0x0752c8  b          #0x7d5c0                                       ; IMP:_$s5Orion14_GlueClassHookPAAE15hookDidActivateyyFZ
+0x0752e0  bl         #0x63ed0                                       ; sub_63ed0
+0x0752fc  tbz        x16, #0x3e, #0x75304
+0x075300  brk        #0xc471
+0x075304  b          #0x7d600                                       ; IMP:_$s5Orion14_GlueClassHookPAAE9groupTypeAA0D5Group_pXpvgZ
+0x075324  bl         #0x7bca4                                       ; sub_7bca4
+0x07532c  ldr        x24, [x8, #0x3a8]                              ; __data->0x75a34
+0x075330  bl         #0x7d590                                       ; IMP:_$s5Orion010_ClassHookB0C6targetxvg
+0x07533c  ldr        x8, [x8, #0x710]                               ; __data+0x1e0
+0x075340  cmn        x8, #1
+0x07534c  ldr        x1, [x8, #0x3a0]                               ; __data+0x4e70
+0x075354  bl         #0x7bc40                                       ; sub_7bc40
+0x075378  tbz        x16, #0x3e, #0x75380
+0x07537c  brk        #0xc471
+0x075380  b          #0x7ec50                                       ; IMP:_objc_release
+0x075388  add        x0, x0, #0x710                                 ; __objc_data+0x18d0
+0x075390  add        x16, x16, #0x94c                               ; __text+0x6d000
+0x07539c  bl         #0x7eff0                                       ; IMP:_swift_once
+0x0753a0  b          #0x75348                                       ; sub_75348
+0x0753a8  add        x16, x16, #0x308                               ; __text+0x6d000
+0x0753b8  b          #0x75654                                       ; sub_75654
+0x0753d4  ldr        x21, [x8, #0x3b8]                              ; __data->0x75bbc
+0x0753d8  bl         #0x7d590                                       ; IMP:_$s5Orion010_ClassHookB0C6targetxvg
+0x0753e4  ldr        x8, [x8, #0x718]                               ; __data+0x1e8
+0x0753e8  cmn        x8, #1
+0x0753f4  ldr        x1, [x8, #0x3b0]                               ; __data+0x4e80
+0x075404  bl         #0x7ec80                                       ; IMP:_objc_retainAutoreleasedReturnValue
+0x075410  bl         #0x7ec50                                       ; IMP:_objc_release
+0x075424  retab      
+0x07542c  add        x0, x0, #0x718                                 ; __objc_data+0x18d0
+0x075434  add        x16, x16, #0xb0c                               ; __text+0x6d000
+0x075440  bl         #0x7eff0                                       ; IMP:_swift_once
+0x075444  b          #0x753f0                                       ; sub_753f0
+0x07544c  add        x16, x16, #0x3bc                               ; __text+0x6d000
+0x07545c  b          #0x75870                                       ; sub_75870
+0x075460  b          #0x787a4                                       ; sub_787a4
+0x075464  b          #0x7d580                                       ; IMP:_$s5Orion010_ClassHookB0C6targetACyxGx_tcfc
+0x075480  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x075484  bl         #0x75464                                       ; sub_75464
+0x075490  retab      
+0x0754a0  bl         #0x7d5a0                                       ; IMP:_$s5Orion010_ClassHookB0Cfd
+0x0754b8  tbz        x16, #0x3e, #0x754c0
+0x0754bc  brk        #0xc471
+0x0754c0  b          #0x7ee00                                       ; IMP:_swift_deallocClassInstance
+0x0754f4  bl         #0x7bba8                                       ; sub_7bba8
+0x075500  add        x0, x0, #0xd8                                  ; __data+0x5ad0
+0x075504  bl         #0x86a8                                        ; sub_86a8
+0x075518  add        x0, x0, #0xd0                                  ; __data+0x5ad0
+0x075520  add        x16, x16, #0x9b4                               ; __text+0x71000
+0x075534  add        x16, x16, #0x508                               ; __const+0x4560
+0x075544  bl         #0x79e1c                                       ; sub_79e1c
+0x075550  ldr        x8, [x8, #0x288]                               ; GOT(_$sytN)
+0x07555c  add        x16, x16, #0x6e8                               ; __text+0x73000
+0x07556c  bl         #0x7bd28                                       ; sub_7bd28
+0x075588  retab      
+0x0755bc  ldr        x6, [x0]                                       ; __data+0x5ba0
+0x0755c4  ldr        x8, [x8, #0x710]                               ; __data+0x1e0
+0x0755c8  cmn        x8, #1
+0x0755d4  ldr        x1, [x8, #0x3a0]                               ; __data+0x4e70
+0x075608  tbz        x16, #0x3e, #0x75610
+0x07560c  brk        #0xc471
+0x075618  add        x0, x0, #0x710                                 ; __objc_data+0x18d0
+0x075620  add        x16, x16, #0x94c                               ; __text+0x6d000
+0x075630  bl         #0x7eff0                                       ; IMP:_swift_once
+0x075638  b          #0x755d0                                       ; sub_755d0
+0x075640  add        x16, x16, #0x4c4                               ; __text+0x6d000
+0x075650  b          #0x75654                                       ; sub_75654
+0x07567c  bl         #0x7bc70                                       ; sub_7bc70
+0x075688  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x075694  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x0756a0  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x0756ac  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x0756b8  bl         #0x7f010                                       ; IMP:_swift_retain
+0x0756bc  bl         #0x7bccc                                       ; sub_7bccc

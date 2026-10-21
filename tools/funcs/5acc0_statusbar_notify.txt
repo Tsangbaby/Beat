@@ -1,0 +1,82 @@
+0x05acdc  ldr        x8, [x8, #0x608]                               ; __data+0xd8
+0x05ace0  cmn        x8, #1
+0x05acec  add        x22, x22, #0xd50                               ; __bss+0x4c40
+0x05ad00  bl         #0x7eda0                                       ; IMP:_swift_beginAccess
+0x05ad04  ldr        x22, [x22]                                     ; __common+0x210
+0x05ad0c  bl         #0x7f010                                       ; IMP:_swift_retain
+0x05ad14  ldr        x1, [x8, #0x288]                               ; SELREF("CGRectValue")
+0x05ad1c  bl         #0x7ec20                                       ; IMP:_objc_msgSend
+0x05ad20  bl         #0x7e920                                       ; IMP:_CGRectGetHeight
+0x05ad28  bl         #0x4c20c                                       ; sub_4c20c
+0x05ad30  bl         #0x7f000                                       ; IMP:_swift_release
+0x05ad48  retab      
+0x05ad50  add        x0, x0, #0x608                                 ; __objc_data+0x18d0
+0x05ad58  add        x16, x16, #0x234                               ; __text+0x47000
+0x05ad64  bl         #0x7eff0                                       ; IMP:_swift_once
+0x05ad68  b          #0x5ace8                                       ; sub_5ace8
+0x05ad90  bl         #0x7d340                                       ; IMP:_$s10Foundation12NotificationVMa
+0x05adb8  cmp        x16, x17
+0x05adc0  brk        #0xc472
+0x05ade4  add        x17, x17, #0x368                               ; GOT(_$s7SwiftUI16RoundedRectangleVMa)
+0x05ade8  ldr        x16, [x17]                                     ; __auth_ptr(___chkstk_darwin)
+0x05ae10  bl         #0x7d320                                       ; IMP:_$s10Foundation12NotificationV36_unconditionallyBridgeFromObjectiveCyACSo14NSNotificationCSgFZ
+0x05ae18  bl         #0x7f010                                       ; IMP:_swift_retain
+0x05ae44  bl         #0x7f000                                       ; IMP:_swift_release
+0x05ae5c  retab      
+0x05ae78  ldr        x8, [x8, #0x560]                               ; __data+0x30
+0x05ae7c  cmn        x8, #1
+0x05ae88  ldr        x0, [x8, #0xc00]                               ; __common+0xc0
+0x05ae90  ldr        x8, [x8, #0x288]                               ; GOT(_$sytN)
+0x05ae9c  add        x16, x16, #0xee8                               ; __text+0x52000
+0x05aeb4  bl         #0x7d9c0                                       ; IMP:_$s7SwiftUI13withAnimationyxAA0D0VSg_xyKXEtKlF
+0x05aec4  retab      
+0x05aecc  add        x0, x0, #0x560                                 ; __objc_data+0x18d0
+0x05aed4  add        x16, x16, #0x42c                               ; __text+0x24000
+0x05aee0  bl         #0x7eff0                                       ; IMP:_swift_once
+0x05aee4  b          #0x5ae84                                       ; sub_5ae84
+0x05af04  ldr        x8, [x8, #0x608]                               ; __data+0xd8
+0x05af08  cmn        x8, #1
+0x05af14  add        x20, x20, #0xd50                               ; __bss+0x4c40
+0x05af28  bl         #0x7eda0                                       ; IMP:_swift_beginAccess
+0x05af2c  ldr        x20, [x20]                                     ; __common+0x210
+0x05af34  bl         #0x7f010                                       ; IMP:_swift_retain
+0x05af3c  bl         #0x4c20c                                       ; sub_4c20c
+0x05af44  bl         #0x7f000                                       ; IMP:_swift_release
+0x05af4c  ldr        x8, [x8, #0x5f8]                               ; __data+0xc8
+0x05af50  cmn        x8, #1
+0x05af5c  add        x20, x20, #0xd30                               ; __bss+0x4c40
+0x05af70  bl         #0x7eda0                                       ; IMP:_swift_beginAccess
+0x05af74  ldr        x8, [x20]                                      ; __common+0x1f0
+0x05af8c  retab      
+0x05af94  add        x0, x0, #0x608                                 ; __objc_data+0x18d0
+0x05af9c  add        x16, x16, #0x234                               ; __text+0x47000
+0x05afa8  bl         #0x7eff0                                       ; IMP:_swift_once
+0x05afac  b          #0x5af10                                       ; sub_5af10
+0x05afb4  add        x0, x0, #0x5f8                                 ; __objc_data+0x18d0
+0x05afbc  add        x16, x16, #0x1b0                               ; __text+0x47000
+0x05afc8  bl         #0x7eff0                                       ; IMP:_swift_once
+0x05afcc  b          #0x5af58                                       ; sub_5af58
+0x05afe8  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x05aff4  bl         #0x7f010                                       ; IMP:_swift_retain
+0x05affc  bl         #0x5a7b8                                       ; sub_5a7b8
+0x05b004  bl         #0x7ec50                                       ; IMP:_objc_release
+0x05b01c  tbz        x16, #0x3e, #0x5b024
+0x05b020  brk        #0xc471
+0x05b024  b          #0x7f000                                       ; IMP:_swift_release
+0x05b028  b          #0x638a8                                       ; sub_638a8
+0x05b030  b          #0x5a608                                       ; sub_5a608
+0x05b038  add        x1, x1, #0x1d0                                 ; __data->0xa69f2
+0x05b040  add        x16, x16, #0xae8                               ; __constg_swiftt+0x13d8
+0x05b050  b          #0x63438                                       ; sub_63438
+0x05b058  add        x3, x3, #0xde8                                 ; __bss+0x4c40
+0x05b05c  b          #0x63478                                       ; sub_63478
+0x05b060  b          #0x7d620                                       ; IMP:_$s5Orion17ClassHookProtocolPAAE10targetNameSSvgZ
+0x05b064  b          #0x7d630                                       ; IMP:_$s5Orion17ClassHookProtocolPAAE12subclassModeAA08SubclassF0OvgZ
+0x05b068  b          #0x7d660                                       ; IMP:_$s5Orion17ClassHookProtocolPAAE9protocolsSaySo0D0CGvgZ
+0x05b06c  b          #0x7d590                                       ; IMP:_$s5Orion010_ClassHookB0C6targetxvg
+0x05b070  b          #0x7d570                                       ; IMP:_$s5Orion010_ClassHookB0C6targetACyxGx_tcfCTj
+0x05b074  b          #0x7d640                                       ; IMP:_$s5Orion17ClassHookProtocolPAAE13deinitializerAA12DeinitPolicyOyF
+0x05b07c  add        x3, x3, #0x750                                 ; __data->0xa69f2
+0x05b084  add        x16, x16, #0x608                               ; __text+0x52000
+0x05b098  add        x16, x16, #0x608                               ; __text+0x52000
+0x05b0ac  add        x16, x16, #0x1b8                               ; __const+0x3560

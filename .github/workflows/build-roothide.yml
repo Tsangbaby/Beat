@@ -1,0 +1,77 @@
+name: Stheno phase-one RootHide build
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  roothide:
+    runs-on: macos-14
+    timeout-minutes: 45
+    env:
+      THEOS_PACKAGE_SCHEME: roothide
+      FINALPACKAGE: '1'
+      HOMEBREW_NO_AUTO_UPDATE: '1'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Select and record Apple toolchain
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo xcode-select -s /Applications/Xcode_15.4.app/Contents/Developer
+          echo "THEOS=$RUNNER_TEMP/stheno-theos" >> "$GITHUB_ENV"
+          sw_vers
+          xcodebuild -version
+          xcrun swift --version
+          xcrun --sdk iphoneos --show-sdk-path
+          xcrun --sdk iphoneos --show-sdk-version
+      - name: Source and language regression gates
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s tests -v
+          bash -n scripts/setup-ci.sh
+          git diff --check
+      - name: Install packaging tools
+        shell: bash
+        run: |
+          set -euo pipefail
+          HOMEBREW_NO_REQUIRE_TAP_TRUST=1 brew install make dpkg ldid
+          echo "$(brew --prefix make)/libexec/gnubin" >> "$GITHUB_PATH"
+          command -v dpkg-deb
+          command -v ldid
+      - name: Prepare pinned RootHide Theos
+        shell: bash
+        run: bash scripts/setup-ci.sh
+      - name: Compile link sign and package on macOS
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p artifacts
+          make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=roothide INSTALL=0 MESSAGES=yes 2>&1 | tee artifacts/BUILD_LOG.txt
+          python3 -c 'from pathlib import Path; p=list(Path("packages").glob("*.deb")); assert len(p)==1, p'
+      - name: Independently verify original deb
+        shell: bash
+        run: |
+          set -euo pipefail
+          DEB="$(python3 -c 'from pathlib import Path; p=list(Path("packages").glob("*.deb")); assert len(p)==1; print(p[0])')"
+          python3 scripts/verify_package.py "$DEB" artifacts
+          git rev-parse HEAD > artifacts/SOURCE_COMMIT.txt
+          git remote get-url origin > artifacts/SOURCE_REPOSITORY.txt
+          git -C "$THEOS" rev-parse HEAD > artifacts/THEOS_COMMIT.txt
+          git -C "$THEOS" submodule status --recursive > artifacts/THEOS_SUBMODULES.txt
+          xcodebuild -version > artifacts/XCODE_VERSION.txt
+          xcrun swift --version >> artifacts/XCODE_VERSION.txt
+          xcrun --sdk iphoneos --show-sdk-version >> artifacts/XCODE_VERSION.txt
+          cp PHASE1.md artifacts/PHASE1.md
+      - name: Upload verified RootHide candidate
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: stheno-phase1-roothide-${{ github.sha }}
+          path: artifacts/
+          if-no-files-found: error
+          retention-days: 14

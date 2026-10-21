@@ -1,0 +1,104 @@
+0x02b784  bl         #0x2db4c                                       ; sub_2db4c
+0x02b788  cbz        x0, #0x2b7e4
+0x02b79c  cbz        x8, #0x2b7f8
+0x02b7a4  bl         #0x7edd0                                       ; IMP:_swift_bridgeObjectRetain
+0x02b7b0  add        x8, x8, #0xe90                                 ; __auth_stubs+0x1ce0
+0x02b7bc  bl         #0x2d830                                       ; sub_2d830
+0x02b7c0  tbz        w1, #0, #0x2b804
+0x02b7d0  bl         #0x2dc34                                       ; sub_2dc34
+0x02b7d4  b          #0x2b80c                                       ; sub_2b80c
+0x02b7d8  bl         #0x2e5cc                                       ; sub_2e5cc
+0x02b7e0  b          #0x2b720                                       ; sub_2b720
+0x02b7e4  bl         #0x2e5cc                                       ; sub_2e5cc
+0x02b7f0  bl         #0x7ec50                                       ; IMP:_objc_release
+0x02b7f4  b          #0x2b720                                       ; sub_2b720
+0x02b800  b          #0x2b814                                       ; sub_2b814
+0x02b810  bl         #0x7edb0                                       ; IMP:_swift_bridgeObjectRelease
+0x02b818  add        x2, x2, #0x550                                 ; __data->0x3ba00027af0
+0x02b824  bl         #0x2e338                                       ; sub_2e338
+0x02b82c  cbz        x8, #0x2b848
+0x02b834  add        x1, x1, #0x550                                 ; __data->0x3ba00027af0
+0x02b83c  bl         #0x2e394                                       ; sub_2e394
+0x02b844  b          #0x2b8e4                                       ; sub_2b8e4
+0x02b84c  cbz        x8, #0x2b888
+0x02b854  bl         #0x7edd0                                       ; IMP:_swift_bridgeObjectRetain
+0x02b860  add        x8, x8, #0xec0                                 ; __auth_stubs+0x1ce0
+0x02b86c  bl         #0x2d830                                       ; sub_2d830
+0x02b870  tbz        w1, #0, #0x2b894
+0x02b880  bl         #0x2dc34                                       ; sub_2dc34
+0x02b884  b          #0x2b89c                                       ; sub_2b89c
+0x02b890  b          #0x2b8a4                                       ; sub_2b8a4
+0x02b8a0  bl         #0x7edb0                                       ; IMP:_swift_bridgeObjectRelease
+0x02b8a8  add        x2, x2, #0x550                                 ; __data->0x3ba00027af0
+0x02b8b4  bl         #0x2e338                                       ; sub_2e338
+0x02b8bc  cbz        x8, #0x2b9a4
+0x02b8c4  add        x23, x23, #0x550                               ; __data->0x3ba00027af0
+0x02b8d0  bl         #0x2e394                                       ; sub_2e394
+0x02b8dc  bl         #0x2e394                                       ; sub_2e394
+0x02b8e8  bl         #0x1b400                                       ; sub_1b400
+0x02b8f0  cbz        x8, #0x2b978
+0x02b8f8  add        x0, x0, #0xe50                                 ; __objc_data+0x18d0
+0x02b8fc  bl         #0x86a8                                        ; sub_86a8
+0x02b908  ldr        x8, [x8, #0x280]                               ; GOT(_$sypN)
+0x02b91c  bl         #0x7ee20                                       ; IMP:_swift_dynamicCast
+0x02b920  tbz        w0, #0, #0x2b988
+0x02b92c  add        x8, x8, #0xf20                                 ; __auth_stubs+0x1ce0
+0x02b930  bl         #0x2e66c                                       ; sub_2e66c
+0x02b940  bl         #0x2cc04                                       ; sub_2cc04
+0x02b948  bl         #0x2e5cc                                       ; sub_2e5cc
+0x02b954  bl         #0x7edb0                                       ; IMP:_swift_bridgeObjectRelease
+0x02b95c  bl         #0x7ec50                                       ; IMP:_objc_release
+0x02b964  bl         #0x7edb0                                       ; IMP:_swift_bridgeObjectRelease
+0x02b968  tst        w24, #1
+0x02b974  b          #0x2b724                                       ; sub_2b724
+0x02b97c  add        x1, x1, #0x550                                 ; __data->0x3ba00027af0
+0x02b984  bl         #0x2e394                                       ; sub_2e394
+0x02b988  bl         #0x2e5cc                                       ; sub_2e5cc
+0x02b994  bl         #0x7ec50                                       ; IMP:_objc_release
+0x02b99c  bl         #0x7edb0                                       ; IMP:_swift_bridgeObjectRelease
+0x02b9a0  b          #0x2b720                                       ; sub_2b720
+0x02b9a8  cbz        x8, #0x2b9e4
+0x02b9b0  bl         #0x7edd0                                       ; IMP:_swift_bridgeObjectRetain
+0x02b9bc  add        x8, x8, #0xef0                                 ; __auth_stubs+0x1ce0
+0x02b9c8  bl         #0x2d830                                       ; sub_2d830
+0x02b9cc  tbz        w1, #0, #0x2b9f0
+0x02b9dc  bl         #0x2dc34                                       ; sub_2dc34
+0x02b9e0  b          #0x2b9f8                                       ; sub_2b9f8
+0x02b9ec  b          #0x2ba00                                       ; sub_2ba00
+0x02b9fc  bl         #0x7edb0                                       ; IMP:_swift_bridgeObjectRelease
+0x02ba04  add        x23, x23, #0x550                               ; __data->0x3ba00027af0
+0x02ba10  bl         #0x2e394                                       ; sub_2e394
+0x02ba1c  bl         #0x2e394                                       ; sub_2e394
+0x02ba20  b          #0x2b8ec                                       ; sub_2b8ec
+0x02ba4c  add        x0, x0, #0x6d0                                 ; __const->0x686000883f4
+0x02ba58  bl         #0x7ed20                                       ; IMP:_swift_allocObject
+0x02ba70  add        x0, x0, #0x6f8                                 ; __const->0x686000883f4
+0x02ba7c  bl         #0x7ed20                                       ; IMP:_swift_allocObject
+0x02ba84  str        x22, [x0, #0x20]                               ; __const+0x1388
+0x02ba8c  add        x16, x16, #0x7a4                               ; __text+0x25000
+0x02baa4  ldr        x16, [x16, #0x2c8]                             ; GOT(__NSConcreteStackBlock)
+0x02babc  ldr        d0, [x9, #0xcf0]                               ; __const+0x250
+0x02bacc  add        x16, x16, #0x82c                               ; __text+0x24000
+0x02bad8  add        x8, x8, #0x710                                 ; __const->0x686000883f4
+0x02bae4  bl         #0x7e9d0                                       ; IMP:__Block_copy
+0x02baf4  bl         #0x7f010                                       ; IMP:_swift_retain
+0x02bafc  bl         #0x7edd0                                       ; IMP:_swift_bridgeObjectRetain
+0x02bb04  bl         #0x7f000                                       ; IMP:_swift_release
+0x02bb0c  ldr        x8, [x8, #0x588]                               ; __data+0x58
+0x02bb10  cmn        x8, #1
+0x02bb1c  ldr        x22, [x8, #0xc28]                              ; __common+0xe8
+0x02bb24  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x02bb28  bl         #0x2e600                                       ; sub_2e600
+0x02bb30  bl         #0x67da0                                       ; sub_67da0
+0x02bb3c  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x02bb44  add        x8, x8, #0xe70                                 ; __auth_stubs+0x1ce0
+0x02bb48  bl         #0x2e66c                                       ; sub_2e66c
+0x02bb60  bl         #0x58ffc                                       ; sub_58ffc
+0x02bb68  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x02bb70  bl         #0x7e9e0                                       ; IMP:__Block_release
+0x02bb84  bl         #0x7eda0                                       ; IMP:_swift_beginAccess
+0x02bb90  bl         #0x1b4a4                                       ; sub_1b4a4
+0x02bb98  bl         #0x7f000                                       ; IMP:_swift_release
+0x02bbb4  retab      
+0x02bbbc  add        x0, x0, #0x588                                 ; __objc_data+0x18d0
+0x02bbc4  add        x16, x16, #0x53c                               ; __text+0x24000

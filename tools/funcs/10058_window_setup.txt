@@ -1,0 +1,23 @@
+0x010070  bl         #0x7ec30                                       ; IMP:_objc_msgSendSuper2
+0x01007c  bl         #0xfd20                                        ; sub_fd20
+0x010080  bl         #0x7ebe0                                       ; IMP:_objc_allocWithZone
+0x010084  bl         #0x130b4                                       ; sub_130b4
+0x010088  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x010090  bl         #0x7dbf0                                       ; IMP:_$s7SwiftUI19UIHostingControllerC8rootViewACyxGx_tcfc
+0x01009c  ldr        x1, [x8, #0x600]                               ; SELREF("view")
+0x0100a0  bl         #0x7ec20                                       ; IMP:_objc_msgSend
+0x0100a8  bl         #0x7ec80                                       ; IMP:_objc_retainAutoreleasedReturnValue
+0x0100ac  cbz        x0, #0x1031c
+0x0100b8  ldr        x0, [x8, #0x640]                               ; CLASSREF(UIColor)
+0x0100bc  bl         #0x7ec40                                       ; IMP:_objc_opt_self
+0x0100c8  ldr        x1, [x25, #0x328]                              ; SELREF("clearColor")
+0x0100cc  bl         #0x7ec20                                       ; IMP:_objc_msgSend
+0x0100d4  bl         #0x7ec80                                       ; IMP:_objc_retainAutoreleasedReturnValue
+0x0100e0  ldr        x1, [x26, #0x508]                              ; SELREF("setBackgroundColor:")
+0x0100ec  bl         #0x7ec20                                       ; IMP:_objc_msgSend
+0x0100f4  bl         #0x7ec50                                       ; IMP:_objc_release
+0x0100fc  bl         #0x7ec50                                       ; IMP:_objc_release
+0x010104  ldr        x1, [x8, #0x550]                               ; SELREF("setRootViewController:")
+0x010110  bl         #0x7ec20                                       ; IMP:_objc_msgSend
+0x010118  bl         #0x827c                                        ; sub_827c
+0x010124  ldr        x8, [x8, #0x2c0]                               ; GOT(_UIWindowLevelStatusBar)

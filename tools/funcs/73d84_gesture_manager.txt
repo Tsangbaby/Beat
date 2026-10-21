@@ -1,0 +1,98 @@
+0x073d90  bl         #0x7eff0                                       ; IMP:_swift_once
+0x073d94  b          #0x73d68                                       ; sub_73d68
+0x073d9c  ldr        x8, [x8, #0x3d0]                               ; SELREF("gestureRecognizer:shouldReceiveTouch:")
+0x073da4  str        x8, [x9, #0x340]                               ; __data+0x4e10
+0x073da8  ret        
+0x073dd0  bl         #0x5d500                                       ; sub_5d500
+0x073dd4  ldr        w1, [x0, #0x30]                                ; 0x30
+0x073dd8  ldrh       w2, [x0, #0x34]                                ; 0x34
+0x073ddc  bl         #0x7ed20                                       ; IMP:_swift_allocObject
+0x073de8  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x073df0  bl         #0x7d580                                       ; IMP:_$s5Orion010_ClassHookB0C6targetACyxGx_tcfc
+0x073df8  ldr        x16, [x0]                                      ; 0x0
+0x073e10  cmp        x16, x17
+0x073e18  brk        #0xc472
+0x073e20  add        x8, x8, #0xe28                                 ; __bss+0x4c40
+0x073e24  ldr        x8, [x8]                                       ; __common+0x2e8
+0x073e4c  bl         #0x7f000                                       ; IMP:_swift_release
+0x073e60  retab      
+0x073e88  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x073e94  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x073ea0  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x073eb8  bl         #0x73dac                                       ; sub_73dac
+0x073ec4  bl         #0x7ec50                                       ; IMP:_objc_release
+0x073ecc  bl         #0x7ec50                                       ; IMP:_objc_release
+0x073ed4  bl         #0x7ec50                                       ; IMP:_objc_release
+0x073eec  retab      
+0x073ef4  ldr        x8, [x8, #0x2b8]                               ; SELREF("_handleClickAndDragHomeGesture:")
+0x073efc  str        x8, [x9, #0x350]                               ; __data+0x4e20
+0x073f00  ret        
+0x073f24  bl         #0x5d500                                       ; sub_5d500
+0x073f28  ldr        w1, [x0, #0x30]                                ; 0x30
+0x073f2c  ldrh       w2, [x0, #0x34]                                ; 0x34
+0x073f30  bl         #0x7ed20                                       ; IMP:_swift_allocObject
+0x073f3c  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x073f44  bl         #0x7d580                                       ; IMP:_$s5Orion010_ClassHookB0C6targetACyxGx_tcfc
+0x073f4c  ldr        x16, [x0]                                      ; 0x0
+0x073f54  add        x8, x8, #0xe28                                 ; __bss+0x4c40
+0x073f6c  cmp        x16, x17
+0x073f74  brk        #0xc472
+0x073f78  ldr        x8, [x8]                                       ; __common+0x2e8
+0x073fac  tbz        x16, #0x3e, #0x73fb4
+0x073fb0  brk        #0xc471
+0x073fb4  b          #0x7f000                                       ; IMP:_swift_release
+0x073fd4  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x073fe0  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x073ff4  bl         #0x73f04                                       ; sub_73f04
+0x073ffc  bl         #0x7ec50                                       ; IMP:_objc_release
+0x074018  tbz        x16, #0x3e, #0x74020
+0x07401c  brk        #0xc471
+0x074020  b          #0x7ec50                                       ; IMP:_objc_release
+0x074028  ldr        x8, [x8, #0x2c0]                               ; SELREF("_handleDeckSwitcherPanGesture:")
+0x074030  str        x8, [x9, #0x360]                               ; __data+0x4e30
+0x074034  ret        
+0x074058  bl         #0x5d500                                       ; sub_5d500
+0x07405c  ldr        w1, [x0, #0x30]                                ; 0x30
+0x074060  ldrh       w2, [x0, #0x34]                                ; 0x34
+0x074064  bl         #0x7ed20                                       ; IMP:_swift_allocObject
+0x074070  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x074078  bl         #0x7d580                                       ; IMP:_$s5Orion010_ClassHookB0C6targetACyxGx_tcfc
+0x074080  ldr        x16, [x0]                                      ; 0x0
+0x074088  add        x8, x8, #0xe28                                 ; __bss+0x4c40
+0x0740a0  cmp        x16, x17
+0x0740a8  brk        #0xc472
+0x0740ac  ldr        x8, [x8]                                       ; __common+0x2e8
+0x0740e0  tbz        x16, #0x3e, #0x740e8
+0x0740e4  brk        #0xc471
+0x0740e8  b          #0x7f000                                       ; IMP:_swift_release
+0x074108  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x074114  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x074128  bl         #0x74038                                       ; sub_74038
+0x074130  bl         #0x7ec50                                       ; IMP:_objc_release
+0x07414c  tbz        x16, #0x3e, #0x74154
+0x074150  brk        #0xc471
+0x074154  b          #0x7ec50                                       ; IMP:_objc_release
+0x07415c  ldr        x8, [x8, #0x620]                               ; SELREF("zStackParticipantDidChange:")
+0x074164  str        x8, [x9, #0x370]                               ; __data+0x4e40
+0x074168  ret        
+0x07418c  bl         #0x5d500                                       ; sub_5d500
+0x074190  ldr        w1, [x0, #0x30]                                ; 0x30
+0x074194  ldrh       w2, [x0, #0x34]                                ; 0x34
+0x074198  bl         #0x7ed20                                       ; IMP:_swift_allocObject
+0x0741a4  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x0741ac  bl         #0x7d580                                       ; IMP:_$s5Orion010_ClassHookB0C6targetACyxGx_tcfc
+0x0741b4  ldr        x16, [x0]                                      ; 0x0
+0x0741bc  add        x8, x8, #0xe28                                 ; __bss+0x4c40
+0x0741d4  cmp        x16, x17
+0x0741dc  brk        #0xc472
+0x0741e0  ldr        x8, [x8]                                       ; __common+0x2e8
+0x074214  tbz        x16, #0x3e, #0x7421c
+0x074218  brk        #0xc471
+0x07421c  b          #0x7f000                                       ; IMP:_swift_release
+0x07423c  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x074248  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x07425c  bl         #0x7416c                                       ; sub_7416c
+0x074264  bl         #0x7ec50                                       ; IMP:_objc_release
+0x074280  tbz        x16, #0x3e, #0x74288
+0x074284  brk        #0xc471
+0x074288  b          #0x7ec50                                       ; IMP:_objc_release

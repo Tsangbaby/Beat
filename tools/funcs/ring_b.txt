@@ -1,0 +1,29 @@
+0x3ac3c ldr       x6, [x6, #0x2d8]                             ; GOT(__swiftEmptyArrayStorage)
+0x3ac50 bl        #0x7d560                                     ; IMP:_$s2os0A4_log_3dso0B0__ySo0a1_B7_type_ta_SVSo03OS_a1_B0Cs12StaticStringVs7CVarArg_pdtF
+0x3ac58 bl        #0x7ec50                                     ; IMP:_objc_release
+0x3ac9c bl        #0x7da50                                     ; IMP:_$s7SwiftUI16_FlexFrameLayoutV8minWidth05idealG003maxG00F6Height0hJ00iJ09alignmentAC12CoreGraphics7CGFloatVSg_A5nA9AlignmentVtcfC
+0x3ad34 bl        #0x7e1c0                                     ; IMP:_$s7SwiftUI9AlignmentV6centerACvgZ
+0x3ad48 bl        #0x7e260                                     ; IMP:_$s7SwiftUI9UnitPointV6centerACvgZ
+0x3ad6c bl        #0x7d930                                     ; IMP:_$s7SwiftUI11StateObjectV12wrappedValuexvg
+0x3ad74 bl        #0x34454                                     ; sub_34454
+0x3ad80 bl        #0x7f000                                     ; IMP:_swift_release
+0x3ad90 bl        #0x7deb0                                     ; IMP:_$s7SwiftUI5AngleV14animatableDataSdvg
+0x3ada0 bl        #0x7dec0                                     ; IMP:_$s7SwiftUI5AngleV14animatableDataSdvs
+0x3adac bl        #0x7e260                                     ; IMP:_$s7SwiftUI9UnitPointV6centerACvgZ
+0x3adf4 bl        #0x7edd0                                     ; IMP:_swift_bridgeObjectRetain
+0x3adfc add       x0, x0, #0xe58                               ; __data->0x3ba00027af0
+0x3ae00 bl        #0x86a8                                      ; sub_86a8
+0x3ae0c bl        #0x7e090                                     ; IMP:_$s7SwiftUI5StateV12wrappedValuexvg
+0x3ae18 cbz       x26, #0x3aea4                               
+0x3ae24 bl        #0x7edd0                                     ; IMP:_swift_bridgeObjectRetain
+0x3ae2c bl        #0x7f000                                     ; IMP:_swift_release
+0x3ae30 cmp       x23, x25                                    
+0x3ae50 bl        #0x7e830                                     ; IMP:_$ss27_stringCompareWithSmolCheck__9expectingSbs11_StringGutsV_ADs01_G16ComparisonResultOtF
+0x3ae5c bl        #0x7edb0                                     ; IMP:_swift_bridgeObjectRelease
+0x3ae64 bl        #0x7edb0                                     ; IMP:_swift_bridgeObjectRelease
+0x3ae9c tbz       w23, #0, #0x3aedc                           
+0x3aea0 b         #0x3af24                                     ; sub_3af24
+0x3aea8 bl        #0x7edb0                                     ; IMP:_swift_bridgeObjectRelease
+0x3aee0 b         #0x3af24                                     ; sub_3af24
+0x3aeec bl        #0x7edc0                                     ; IMP:_swift_bridgeObjectRelease_n
+0x3af2c bl        #0x7ea20                                     ; IMP:___sincos_stret

@@ -1,0 +1,56 @@
+0x448c4 bl        #0x7e150                                     ; IMP:_$s7SwiftUI8GridItemVMa
+0x448ec cmp       x16, x17                                    
+0x448f4 brk       #0xc472                                     
+0x44918 add       x17, x17, #0x348                             ; GOT(_$s7SwiftUI16RoundedRectangleVMa)
+0x4491c ldr       x16, [x17]                                   ; __auth_ptr(___chkstk_darwin)
+0x4493c add       x0, x0, #0x1c0                               ; __data->0x68600087f80
+0x44940 bl        #0x86a8                                      ; sub_86a8
+0x44964 cmp       x16, x17                                    
+0x4496c brk       #0xc472                                     
+0x44990 add       x17, x17, #0x348                             ; GOT(_$s7SwiftUI16RoundedRectangleVMa)
+0x44994 ldr       x16, [x17]                                   ; __auth_ptr(___chkstk_darwin)
+0x449b0 tbnz      x27, #0x3f, #0x44c8c                        
+0x449c0 cbz       x27, #0x44ad8                               
+0x449d0 ldr       x8, [x8, #0x2d8]                             ; GOT(__swiftEmptyArrayStorage)
+0x449e8 bl        #0x6dc24                                     ; sub_6dc24
+0x449f4 ldr       x8, [x8, #0x148]                             ; GOT(_$s7SwiftUI8GridItemV4SizeO5fixedyAE12CoreGraphics7CGFloatVcAEmFWC)
+0x44a48 bl        #0x7e160                                     ; IMP:_$s7SwiftUI8GridItemV_7spacing9alignmentA2C4SizeO_12CoreGraphics7CGFloatVSgAA9AlignmentVSgtcfC
+0x44a58 cmp       x25, x8, lsr #1                             
+0x44a9c b         #0x44ac8                                     ; sub_44ac8
+0x44aa0 cmp       x8, #1                                      
+0x44ab8 bl        #0x6dc24                                     ; sub_6dc24
+0x44ac4 b         #0x44a60                                     ; sub_44a60
+0x44ad4 b         #0x44ae4                                     ; sub_44ae4
+0x44ae0 ldr       x19, [x19, #0x2d8]                           ; GOT(__swiftEmptyArrayStorage)
+0x44ae8 add       x0, x0, #0x1d8                               ; __data->0x68600087f80
+0x44aec bl        #0x86a8                                      ; sub_86a8
+0x44b08 bl        #0x7ed20                                     ; IMP:_swift_allocObject
+0x44b14 ldr       q0, [x8, #0xe40]                             ; __const+0x3a0
+0x44b18 str       q0, [x0, #0x10]                              ; __data+0x2cb8
+0x44b1c add       x8, x0, x21                                  ; __data+0x2ca8
+0x44b20 bl        #0x7dcb0                                     ; IMP:_$s7SwiftUI21PinnedScrollableViewsV14sectionHeadersACvgZ
+0x44b2c add       x0, x0, #0x1e0                               ; __data->0x68600087f80
+0x44b34 ldr       x16, [x16, #0x80]                            ; GOT(_$s7SwiftUI21PinnedScrollableViewsVMa)
+0x44b48 ldr       x16, [x16, #0x88]                            ; GOT(_$s7SwiftUI21PinnedScrollableViewsVs10SetAlgebraAAMc)
+0x44b58 bl        #0x4a750                                     ; sub_4a750
+0x44b64 add       x20, x20, #0x1e8                             ; __data->0x68600087f80
+0x44b6c bl        #0x86a8                                      ; sub_86a8
+0x44b78 add       x0, x0, #0x1f0                               ; __data->0x68600087f80
+0x44b80 ldr       x16, [x16, #0x1d0]                           ; GOT(_$sSayxGSTsMc)
+0x44b94 bl        #0x4b484                                     ; sub_4b484
+0x44bb4 bl        #0x7e650                                     ; IMP:_$ss10SetAlgebraPyxqd__ncSTRd__7ElementQyd__ACRtzlufCTj
+0x44bc4 add       x17, x17, #0x348                             ; GOT(_$s7SwiftUI16RoundedRectangleVMa)
+0x44bc8 ldr       x16, [x17]                                   ; __auth_ptr(___chkstk_darwin)
+0x44be8 bl        #0x7dbc0                                     ; IMP:_$s7SwiftUI19HorizontalAlignmentV6centerACvgZ
+0x44bf4 add       x0, x0, #0x1f8                               ; __data->0x68600087f80
+0x44bf8 bl        #0x86a8                                      ; sub_86a8
+0x44c00 bl        #0x4a7a0                                     ; sub_4a7a0
+0x44c0c add       x16, x16, #0x794                             ; __text+0x42000
+0x44c40 bl        #0x7e230                                     ; IMP:_$s7SwiftUI9LazyVGridV7columns9alignment7spacing11pinnedViews7contentACyxGSayAA8GridItemVG_AA19HorizontalAlignmentV12CoreGraphics7CGFloatVSgAA016PinnedScrollableI0VxyXEtcfC
+0x44c88 retab                                                 
+0x44c8c brk       #1                                          
+0x44cd0 add       x0, x0, #0x1f8                               ; __data->0x68600087f80
+0x44cd4 bl        #0x86a8                                      ; sub_86a8
+0x44cf8 cmp       x16, x17                                    
+0x44d00 brk       #0xc472                                     
+0x44d24 add       x17, x17, #0x348                             ; GOT(_$s7SwiftUI16RoundedRectangleVMa)

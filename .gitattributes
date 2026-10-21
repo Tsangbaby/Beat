@@ -1,0 +1,5 @@
+# The supplied archive contains mixed LF/CRLF evidence files. Preserve bytes;
+# a carriage return ending a line is not a newly introduced whitespace defect.
+* whitespace=cr-at-eol
+# Keep archived disassembly/metadata byte-for-byte, including padded columns.
+tools/** -whitespace

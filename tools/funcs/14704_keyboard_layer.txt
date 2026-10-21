@@ -1,0 +1,283 @@
+0x01470c  bl         #0x7e2c0                                       ; IMP:_$s8Dispatch0A4TimeV3nowACyFZ
+0x01471c  bl         #0x7e2e0                                       ; IMP:_$s8Dispatch1poiyAA0A4TimeVAD_SdtF
+0x014744  add        x16, x16, #0x504                               ; __text+0x13000
+0x01475c  ldr        x16, [x16, #0x2c8]                             ; GOT(__NSConcreteStackBlock)
+0x014774  ldr        d0, [x9, #0xcf0]                               ; __const+0x250
+0x014784  add        x16, x16, #0x1a4                               ; __text+0xb000
+0x014790  add        x8, x8, #0x210                                 ; __const->0x686000883f4
+0x01479c  bl         #0x7e9d0                                       ; IMP:__Block_copy
+0x0147a8  bl         #0x7f010                                       ; IMP:_swift_retain
+0x0147b0  bl         #0x7e2a0                                       ; IMP:_$s8Dispatch0A3QoSV11unspecifiedACvgZ
+0x0147b8  ldr        x8, [x8, #0x2d8]                               ; GOT(__swiftEmptyArrayStorage)
+0x0147c0  bl         #0x19148                                       ; sub_19148
+0x0147cc  add        x20, x20, #0xc28                               ; __objc_data+0x18d0
+0x0147d4  bl         #0x86a8                                        ; sub_86a8
+0x0147e0  add        x0, x0, #0xc30                                 ; __objc_data+0x18d0
+0x0147e8  ldr        x16, [x16, #0x1d0]                             ; GOT(_$sSayxGSTsMc)
+0x0147fc  bl         #0x1ac08                                       ; sub_1ac08
+0x014820  bl         #0x7e650                                       ; IMP:_$ss10SetAlgebraPyxqd__ncSTRd__7ElementQyd__ACRtzlufCTj
+0x014838  bl         #0x7e5a0                                       ; IMP:_$sSo17OS_dispatch_queueC8DispatchE10asyncAfter8deadline3qos5flags7executeyAC0D4TimeV_AC0D3QoSVAC0D13WorkItemFlagsVyyXBtF
+0x01488c  bl         #0x7e9e0                                       ; IMP:__Block_release
+0x014894  bl         #0x7ec50                                       ; IMP:_objc_release
+0x01489c  bl         #0x7f000                                       ; IMP:_swift_release
+0x0148a4  cmp        x26, #1
+0x0148b0  add        x1, x1, #0xc18                                 ; __objc_data+0x18d0
+0x0148b8  add        x2, x2, #0x628                                 ; __objc_const+0x2000
+0x0148c0  bl         #0x1b3ac                                       ; sub_1b3ac
+0x0148cc  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x0148d0  bl         #0x7e5b0                                       ; IMP:_$sSo17OS_dispatch_queueC8DispatchE4mainABvgZ
+0x0148dc  add        x0, x0, #0x248                                 ; __const->0x686000883f4
+0x0148e8  bl         #0x7ed20                                       ; IMP:_swift_allocObject
+0x0148f4  str        x24, [x0, #0x20]                               ; __const+0xed8
+0x0148fc  add        x16, x16, #0x554                               ; __text+0x13000
+0x014914  ldr        x16, [x16, #0x2c8]                             ; GOT(__NSConcreteStackBlock)
+0x01492c  ldr        d0, [x9, #0xcf0]                               ; __const+0x250
+0x01493c  add        x16, x16, #0x1a4                               ; __text+0xb000
+0x014948  add        x8, x8, #0x260                                 ; __const->0x686000883f4
+0x014954  bl         #0x7e9d0                                       ; IMP:__Block_copy
+0x014960  bl         #0x7f010                                       ; IMP:_swift_retain
+0x014968  bl         #0x1b4a4                                       ; sub_1b4a4
+0x014970  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x014978  bl         #0x7e2a0                                       ; IMP:_$s8Dispatch0A3QoSV11unspecifiedACvgZ
+0x014980  ldr        x8, [x8, #0x2d8]                               ; GOT(__swiftEmptyArrayStorage)
+0x014988  bl         #0x19148                                       ; sub_19148
+0x014994  add        x20, x20, #0xc28                               ; __objc_data+0x18d0
+0x01499c  bl         #0x86a8                                        ; sub_86a8
+0x0149a8  add        x0, x0, #0xc30                                 ; __objc_data+0x18d0
+0x0149b0  ldr        x16, [x16, #0x1d0]                             ; GOT(_$sSayxGSTsMc)
+0x0149c4  bl         #0x1ac08                                       ; sub_1ac08
+0x0149e8  bl         #0x7e650                                       ; IMP:_$ss10SetAlgebraPyxqd__ncSTRd__7ElementQyd__ACRtzlufCTj
+0x014a00  bl         #0x7e5c0                                       ; IMP:_$sSo17OS_dispatch_queueC8DispatchE5async5group3qos5flags7executeySo0a1_b1_F0CSg_AC0D3QoSVAC0D13WorkItemFlagsVyyXBtF
+0x014a3c  bl         #0x7e9e0                                       ; IMP:__Block_release
+0x014a44  bl         #0x7ec50                                       ; IMP:_objc_release
+0x014a4c  bl         #0x1b3f0                                       ; sub_1b3f0
+0x014a54  bl         #0x7f000                                       ; IMP:_swift_release
+0x014a74  retab      
+0x014a7c  cmp        x20, #0
+0x014a84  bl         #0x7e7b0                                       ; IMP:_$ss18_CocoaArrayWrapperV8endIndexSivg
+0x014a8c  b          #0x1451c                                       ; sub_1451c
+0x014aa4  cmp        w8, #1
+0x014ab4  bl         #0x1327c                                       ; sub_1327c
+0x014ac0  retab      
+0x014b04  bl         #0x67da0                                       ; sub_67da0
+0x014b2c  bl         #0x67da0                                       ; sub_67da0
+0x014b38  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x014b40  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x014b48  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x014b50  add        x8, x8, #0x960                                 ; __auth_stubs+0x1ce0
+0x014b78  bl         #0x59550                                       ; sub_59550
+0x014b80  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x014b8c  bl         #0x7f0d0                                       ; IMP:_swift_unknownObjectRelease_n
+0x014bb4  tbz        x16, #0x3e, #0x14bbc
+0x014bb8  brk        #0xc471
+0x014bbc  b          #0x1b3f0                                       ; sub_1b3f0
+0x014bd4  bl         #0x13240                                       ; sub_13240
+0x014bd8  tbz        w0, #0, #0x14be0
+0x014bdc  bl         #0x14184                                       ; sub_14184
+0x014be8  retab      
+0x014c0c  cmp        x19, #1
+0x014c20  bl         #0x1b4a4                                       ; sub_1b4a4
+0x014c28  ldr        x23, [x8, #0x608]                              ; __data+0xd8
+0x014c30  bl         #0x7edd0                                       ; IMP:_swift_bridgeObjectRetain
+0x014c34  cmn        x23, #1
+0x014c40  add        x23, x23, #0xd50                               ; __bss+0x4c40
+0x014c4c  bl         #0x1b66c                                       ; sub_1b66c
+0x014c50  ldr        x8, [x23]                                      ; __common+0x210
+0x014c58  add        x9, x9, #0xd08                                 ; __bss+0x4c40
+0x014c5c  ldr        x9, [x9]                                       ; __common+0x1c8
+0x014c68  cmp        x22, x2
+0x014c80  bl         #0x7e830                                       ; IMP:_$ss27_stringCompareWithSmolCheck__9expectingSbs11_StringGutsV_ADs01_G16ComparisonResultOtF
+0x014c8c  bl         #0x7edb0                                       ; IMP:_swift_bridgeObjectRelease
+0x014c90  tbnz       w22, #0, #0x14d28
+0x014c94  bl         #0x1b73c                                       ; sub_1b73c
+0x014c9c  bl         #0x1b71c                                       ; sub_1b71c
+0x014ca4  bl         #0x67da0                                       ; sub_67da0
+0x014cb0  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x014ce0  bl         #0x59270                                       ; sub_59270
+0x014ce8  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x014cf0  add        x8, x8, #0x960                                 ; __auth_stubs+0x1ce0
+0x014cf4  bl         #0x1b9dc                                       ; sub_1b9dc
+0x014d0c  bl         #0x59318                                       ; sub_59318
+0x014d18  bl         #0x7f0d0                                       ; IMP:_swift_unknownObjectRelease_n
+0x014d1c  b          #0x14d28                                       ; sub_14d28
+0x014d24  bl         #0x7edb0                                       ; IMP:_swift_bridgeObjectRelease
+0x014d2c  ldr        x21, [x21, #0x2d8]                             ; GOT(__swiftEmptyArrayStorage)
+0x014d34  bl         #0x133b4                                       ; sub_133b4
+0x014d3c  bl         #0x1b3f0                                       ; sub_1b3f0
+0x014d44  ldr        x8, [x8, #0xba8]                               ; __common+0x68
+0x014d50  bl         #0x7edb0                                       ; IMP:_swift_bridgeObjectRelease
+0x014d60  bl         #0x1b3f0                                       ; sub_1b3f0
+0x014d78  retab      
+0x014d80  add        x0, x0, #0x608                                 ; __objc_data+0x18d0
+0x014d88  add        x16, x16, #0x234                               ; __text+0x47000
+0x014d94  bl         #0x7eff0                                       ; IMP:_swift_once
+0x014d98  b          #0x14c3c                                       ; sub_14c3c
+0x014dcc  ldr        x8, [x8, #0x2d0]                               ; GOT(___stack_chk_guard)
+0x014ddc  bl         #0x7d3d0                                       ; IMP:_$s10Foundation25NSFastEnumerationIteratorVMa
+0x014de4  bl         #0x1b620                                       ; sub_1b620
+0x014e08  add        x17, x17, #0x320                               ; GOT(_$s7SwiftUI16RoundedRectangleVMa)
+0x014e0c  ldr        x16, [x17]                                     ; __auth_ptr(___chkstk_darwin)
+0x014e14  bl         #0x1b7fc                                       ; sub_1b7fc
+0x014e24  cmp        x22, #1
+0x014e30  ldr        x0, [x0, #0x2d8]                               ; GOT(__swiftEmptyArrayStorage)
+0x014e34  b          #0x1539c                                       ; sub_1539c
+0x014e40  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x014e48  bl         #0x7e580                                       ; IMP:_$sSo12NSOrderedSetC10FoundationE12makeIteratorAC017NSFastEnumerationE0VyF
+0x014e54  bl         #0x7d3c0                                       ; IMP:_$s10Foundation25NSFastEnumerationIteratorV4nextypSgyF
+0x014e5c  cbz        x8, #0x15350
+0x014e64  ldr        x9, [x9, #0x2d8]                               ; GOT(__swiftEmptyArrayStorage)
+0x014e6c  add        x8, x8, #0x930                                 ; __auth_stubs+0x1ce0
+0x014e80  add        x8, x8, #0x910                                 ; __auth_stubs+0x1ce0
+0x014ea0  bl         #0x1b400                                       ; sub_1b400
+0x014eb0  bl         #0x1b410                                       ; sub_1b410
+0x014eb8  bl         #0x7e820                                       ; IMP:_$ss27_bridgeAnythingToObjectiveCyyXlxlF
+0x014ec4  bl         #0x1b454                                       ; sub_1b454
+0x014ee8  bl         #0x7d510                                       ; IMP:_$s10ObjectiveC8SelectorVyACSScfC
+0x014ef8  bl         #0x70b98                                       ; sub_70b98
+0x014efc  cbz        x0, #0x153d4
+0x014f10  bl         #0x70ba0                                       ; f_70ba0
+0x014f1c  bl         #0x70b98                                       ; sub_70b98
+0x014f20  cbz        x0, #0x153d8
+0x014f28  cmp        w8, #1
+0x014f34  ldr        x8, [x8, #0x590]                               ; __data+0x60
+0x014f38  cmn        x8, #1
+0x014f44  ldr        x25, [x8, #0xc30]                              ; __common+0xf0
+0x014f4c  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x014f50  bl         #0x1b8b4                                       ; sub_1b8b4
+0x014f54  cbz        x25, #0x14f84
+0x014f60  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x014f68  ldr        x1, [x8, #0x4c8]                               ; SELREF("performSelector:")
+0x014f70  bl         #0x7ec20                                       ; IMP:_objc_msgSend
+0x014f7c  bl         #0x7ebf0                                       ; IMP:_objc_autorelease
+0x014f80  b          #0x14f88                                       ; sub_14f88
+0x014f8c  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x014f94  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x014f9c  bl         #0x1b4a4                                       ; sub_1b4a4
+0x014fa4  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x014fc8  bl         #0x5963c                                       ; sub_5963c
+0x014fd4  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x014fdc  bl         #0x1b3f0                                       ; sub_1b3f0
+0x014fe4  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x014fe8  ldr        x0, [x19, #0x630]                              ; CLASSREF(UIView)
+0x014fec  bl         #0x7ec40                                       ; IMP:_objc_opt_self
+0x014ff8  bl         #0x7ee40                                       ; IMP:_swift_dynamicCastObjCClass
+0x014ffc  cbnz       x0, #0x151a4
+0x015004  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x01500c  ldr        x8, [x8, #0x598]                               ; __data+0x68
+0x015010  cmn        x8, #1
+0x015018  ldr        x25, [x24, #0xc38]                             ; __common+0xf8
+0x015020  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x015024  bl         #0x1b8b4                                       ; sub_1b8b4
+0x015028  cbz        x25, #0x15058
+0x015034  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x01503c  ldr        x1, [x8, #0x4c8]                               ; SELREF("performSelector:")
+0x015044  bl         #0x7ec20                                       ; IMP:_objc_msgSend
+0x015050  bl         #0x7ebf0                                       ; IMP:_objc_autorelease
+0x015054  b          #0x1505c                                       ; sub_1505c
+0x015060  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x015068  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x015078  bl         #0x7d510                                       ; IMP:_$s10ObjectiveC8SelectorVyACSScfC
+0x01507c  cbz        x27, #0x150e4
+0x01508c  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x015094  bl         #0x70b98                                       ; sub_70b98
+0x015098  cbz        x0, #0x153dc
+0x0150ac  bl         #0x70ba0                                       ; f_70ba0
+0x0150b8  bl         #0x70b98                                       ; sub_70b98
+0x0150bc  cbz        x0, #0x153e0
+0x0150cc  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x0150d4  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x0150dc  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x0150e0  b          #0x15100                                       ; sub_15100
+0x0150ec  bl         #0x70b98                                       ; sub_70b98
+0x0150f0  cbz        x0, #0x153e4
+0x0150fc  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x015100  ldr        x0, [x19, #0x630]                              ; CLASSREF(UIView)
+0x015104  bl         #0x7ec40                                       ; IMP:_objc_opt_self
+0x015110  bl         #0x7ee40                                       ; IMP:_swift_dynamicCastObjCClass
+0x015114  cbnz       x0, #0x15140
+0x01511c  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x015124  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x015130  bl         #0x7d3c0                                       ; IMP:_$s10Foundation25NSFastEnumerationIteratorV4nextypSgyF
+0x015138  cbnz       x8, #0x14e98
+0x01513c  b          #0x15348                                       ; sub_15348
+0x01514c  bl         #0x7efd0                                       ; IMP:_swift_isUniquelyReferencedNonObjC_nonNull_bridgeObject
+0x015150  cbz        w0, #0x1515c
+0x015154  tbnz       x25, #0x3f, #0x1515c
+0x015158  tbz        x25, #0x3e, #0x15178
+0x015160  cbnz       x8, #0x152fc
+0x015170  bl         #0x1b99c                                       ; sub_1b99c
+0x015188  cmp        x21, x9, lsr #1
+0x0151a0  b          #0x15124                                       ; sub_15124
+0x0151a4  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x0151b4  bl         #0x7efd0                                       ; IMP:_swift_isUniquelyReferencedNonObjC_nonNull_bridgeObject
+0x0151b8  cbz        w0, #0x151c4
+0x0151bc  tbnz       x21, #0x3f, #0x151c4
+0x0151c0  tbz        x21, #0x3e, #0x151dc
+0x0151c8  cbnz       x8, #0x1532c
+0x0151d4  bl         #0x1b99c                                       ; sub_1b99c
+0x0151ec  cmp        x21, x9, lsr #1
+0x015204  ldr        x8, [x8, #0x5f8]                               ; __data+0xc8
+0x015208  cmn        x8, #1
+0x015218  add        x21, x21, #0xd30                               ; __bss+0x4c40
+0x015220  bl         #0x1b66c                                       ; sub_1b66c
+0x015224  ldr        x25, [x21]                                     ; __common+0x1f0
+0x01522c  bl         #0x7f010                                       ; IMP:_swift_retain
+0x015234  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x01523c  bl         #0x7ec50                                       ; IMP:_objc_release
+0x01524c  bl         #0x7f000                                       ; IMP:_swift_release
+0x015258  bl         #0x7d3c0                                       ; IMP:_$s10Foundation25NSFastEnumerationIteratorV4nextypSgyF
+0x015264  cbnz       x8, #0x14e98
+0x015268  b          #0x1535c                                       ; sub_1535c
+0x015270  add        x16, x16, #0x5b0                               ; __text+0x24000
+0x015280  add        x0, x0, #0x598                                 ; __objc_data+0x18d0
+0x015284  bl         #0x7eff0                                       ; IMP:_swift_once
+0x015288  b          #0x15018                                       ; sub_15018
+0x015290  add        x16, x16, #0x57c                               ; __text+0x24000
+0x0152a0  add        x0, x0, #0x590                                 ; __objc_data+0x18d0
+0x0152a4  bl         #0x7eff0                                       ; IMP:_swift_once
+0x0152a8  b          #0x14f40                                       ; sub_14f40
+0x0152ac  bl         #0x1b924                                       ; sub_1b924
+0x0152b4  bl         #0x6fc40                                       ; sub_6fc40
+0x0152c0  b          #0x15190                                       ; sub_15190
+0x0152c4  bl         #0x1b924                                       ; sub_1b924
+0x0152cc  bl         #0x6fc40                                       ; sub_6fc40
+0x0152d8  b          #0x151f4                                       ; sub_151f4
+0x0152e0  add        x16, x16, #0x1b0                               ; __text+0x47000
+0x0152f0  add        x0, x0, #0x5f8                                 ; __objc_data+0x18d0
+0x0152f4  bl         #0x7eff0                                       ; IMP:_swift_once
+0x0152f8  b          #0x15210                                       ; sub_15210
+0x015300  cmp        x25, #0
+0x01530c  bl         #0x7edd0                                       ; IMP:_swift_bridgeObjectRetain
+0x015314  bl         #0x7e7b0                                       ; IMP:_$ss18_CocoaArrayWrapperV8endIndexSivg
+0x015324  bl         #0x7edb0                                       ; IMP:_swift_bridgeObjectRelease
+0x015328  b          #0x15170                                       ; sub_15170
+0x01532c  bl         #0x1b95c                                       ; sub_1b95c
+0x015334  bl         #0x7e7b0                                       ; IMP:_$ss18_CocoaArrayWrapperV8endIndexSivg
+0x015340  bl         #0x7edb0                                       ; IMP:_swift_bridgeObjectRelease
+0x015344  b          #0x151d4                                       ; sub_151d4
+0x01534c  b          #0x1535c                                       ; sub_1535c
+0x015354  ldr        x8, [x8, #0x2d8]                               ; GOT(__swiftEmptyArrayStorage)
+0x01537c  bl         #0x1b3f0                                       ; sub_1b3f0
+0x015384  ldr        x8, [x8, #0xba8]                               ; __common+0x68
+0x015394  bl         #0x7edb0                                       ; IMP:_swift_bridgeObjectRelease
+0x0153a4  ldr        x9, [x9, #0x2d0]                               ; GOT(___stack_chk_guard)
+0x0153ac  cmp        x9, x8
+0x0153d0  retab      
+0x0153d4  brk        #1
+0x0153d8  brk        #1
+0x0153dc  brk        #1
+0x0153e0  brk        #1
+0x0153e4  brk        #1
+0x0153e8  bl         #0x7ea30                                       ; IMP:___stack_chk_fail
+0x015418  ldr        x8, [x8, #0x5f8]                               ; __data+0xc8
+0x01541c  cmn        x8, #1
+0x015428  add        x20, x20, #0xd30                               ; __bss+0x4c40
+0x015430  bl         #0x1b63c                                       ; sub_1b63c
+0x015434  ldr        x22, [x20]                                     ; __common+0x1f0
+0x01543c  add        x0, x0, #0x3a0                                 ; __const+0x560
+0x015440  bl         #0x7eef0                                       ; IMP:_swift_getKeyPath
+0x01544c  add        x0, x0, #0x3c8                                 ; __const+0x560
+0x015450  bl         #0x7eef0                                       ; IMP:_swift_getKeyPath
+0x01545c  bl         #0x7f010                                       ; IMP:_swift_retain
+0x015464  bl         #0x7f010                                       ; IMP:_swift_retain
+0x015478  bl         #0x7d780                                       ; IMP:_$s7Combine9PublishedV18_enclosingInstance7wrapped7storagexqd___s24ReferenceWritableKeyPathCyqd__xGAHyqd__ACyxGGtcRld__CluiMZ

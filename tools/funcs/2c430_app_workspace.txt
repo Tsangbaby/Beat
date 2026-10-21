@@ -1,0 +1,153 @@
+0x02c43c  ldr        d1, [x8, #0xf00]                               ; __const+0x1460
+0x02c448  bl         #0x7e200                                       ; IMP:_$s7SwiftUI9AnimationV6spring8response15dampingFraction13blendDurationACSd_S2dtFZ
+0x02c450  str        x0, [x8, #0xc00]                               ; __common+0xc0
+0x02c458  retab      
+0x02c460  add        x1, x1, #0xc08                                 ; __bss+0x4c40
+0x02c464  b          #0x2c474                                       ; sub_2c474
+0x02c46c  add        x1, x1, #0xc10                                 ; __bss+0x4c40
+0x02c470  b          #0x2c474                                       ; sub_2c474
+0x02c48c  ldr        x8, [x8, #0x560]                               ; __data+0x30
+0x02c490  cmn        x8, #1
+0x02c49c  ldr        x0, [x8, #0xc00]                               ; __common+0xc0
+0x02c4a4  ldr        d0, [x8, #0xf20]                               ; __const+0x480
+0x02c4a8  bl         #0x7e1e0                                       ; IMP:_$s7SwiftUI9AnimationV5speedyACSdF
+0x02c4b8  retab      
+0x02c4c0  add        x0, x0, #0x560                                 ; __objc_data+0x18d0
+0x02c4c8  add        x16, x16, #0x42c                               ; __text+0x24000
+0x02c4d4  bl         #0x7eff0                                       ; IMP:_swift_once
+0x02c4d8  b          #0x2c498                                       ; sub_2c498
+0x02c4ec  ldr        d0, [x8, #0xf08]                               ; __const+0x1468
+0x02c4f4  ldr        d1, [x8, #0xf20]                               ; __const+0x480
+0x02c4fc  bl         #0x7e200                                       ; IMP:_$s7SwiftUI9AnimationV6spring8response15dampingFraction13blendDurationACSd_S2dtFZ
+0x02c504  str        x0, [x8, #0xc18]                               ; __common+0xd8
+0x02c50c  retab      
+0x02c520  add        x8, x8, #0x50                                  ; __cstring+0xd30
+0x02c524  bl         #0x2e7c0                                       ; sub_2e7c0
+0x02c528  bl         #0x67e68                                       ; sub_67e68
+0x02c530  str        x0, [x8, #0xc20]                               ; __common+0xe0
+0x02c538  retab      
+0x02c568  bl         #0x67e68                                       ; sub_67e68
+0x02c570  str        x0, [x8, #0xc28]                               ; __common+0xe8
+0x02c578  retab      
+0x02c58c  add        x8, x8, #0x70                                  ; __cstring+0xd30
+0x02c590  bl         #0x2e66c                                       ; sub_2e66c
+0x02c59c  bl         #0x67e68                                       ; sub_67e68
+0x02c5a4  str        x0, [x8, #0xc30]                               ; __common+0xf0
+0x02c5ac  retab      
+0x02c5c0  add        x8, x8, #0x90                                  ; __cstring+0xd30
+0x02c5c4  bl         #0x2e66c                                       ; sub_2e66c
+0x02c5d0  bl         #0x67e68                                       ; sub_67e68
+0x02c5d8  str        x0, [x8, #0xc38]                               ; __common+0xf8
+0x02c5e0  retab      
+0x02c610  bl         #0x67e68                                       ; sub_67e68
+0x02c618  str        x0, [x8, #0xc40]                               ; __common+0x100
+0x02c620  retab      
+0x02c634  add        x8, x8, #0xf90                                 ; __auth_stubs+0x1ce0
+0x02c648  bl         #0x67e68                                       ; sub_67e68
+0x02c650  str        x0, [x8, #0xc48]                               ; __common+0x108
+0x02c658  retab      
+0x02c66c  add        x8, x8, #0x30                                  ; __cstring+0xd30
+0x02c680  bl         #0x67e68                                       ; sub_67e68
+0x02c688  str        x0, [x8, #0xc50]                               ; __common+0x110
+0x02c690  retab      
+0x02c6a8  ldr        x8, [x8, #0x5c0]                               ; __data+0x90
+0x02c6ac  cmn        x8, #1
+0x02c6b8  ldr        d8, [x8, #0xc68]                               ; __common+0x128
+0x02c6c0  ldr        x8, [x8, #0x5c8]                               ; __data+0x98
+0x02c6c4  cmn        x8, #1
+0x02c6d8  ldr        d2, [x8, #0xc70]                               ; __common+0x130
+0x02c6e4  add        x8, x8, #0xc58                                 ; __bss+0x4c40
+0x02c6f4  retab      
+0x02c6fc  add        x0, x0, #0x5c0                                 ; __objc_data+0x18d0
+0x02c704  add        x16, x16, #0xdd0                               ; __text+0x24000
+0x02c710  bl         #0x7eff0                                       ; IMP:_swift_once
+0x02c714  b          #0x2c6b4                                       ; sub_2c6b4
+0x02c71c  add        x0, x0, #0x5c8                                 ; __objc_data+0x18d0
+0x02c724  add        x16, x16, #0xee4                               ; __text+0x24000
+0x02c730  bl         #0x7eff0                                       ; IMP:_swift_once
+0x02c734  b          #0x2c6cc                                       ; sub_2c6cc
+0x02c778  bl         #0x7eda0                                       ; IMP:_swift_beginAccess
+0x02c780  cmp        x8, #1
+0x02c790  ldr        x1, [x8, #0x338]                               ; SELREF("clientProcess")
+0x02c798  bl         #0x7ec20                                       ; IMP:_objc_msgSend
+0x02c7a0  bl         #0x7ec80                                       ; IMP:_objc_retainAutoreleasedReturnValue
+0x02c7a4  cbz        x0, #0x2c814
+0x02c7a8  bl         #0x2dbbc                                       ; sub_2dbbc
+0x02c7ac  cbz        x1, #0x2c814
+0x02c7b4  cmp        x0, x22
+0x02c7d0  bl         #0x7e830                                       ; IMP:_$ss27_stringCompareWithSmolCheck__9expectingSbs11_StringGutsV_ADs01_G16ComparisonResultOtF
+0x02c7d4  tbz        w0, #0, #0x2c80c
+0x02c7dc  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x02c7e4  bl         #0x7edb0                                       ; IMP:_swift_bridgeObjectRelease
+0x02c7f8  bl         #0x7eda0                                       ; IMP:_swift_beginAccess
+0x02c804  bl         #0x1b3f0                                       ; sub_1b3f0
+0x02c808  b          #0x2c814                                       ; sub_2c814
+0x02c810  bl         #0x7edb0                                       ; IMP:_swift_bridgeObjectRelease
+0x02c828  retab      
+0x02c84c  bl         #0x7f010                                       ; IMP:_swift_retain
+0x02c854  bl         #0x7ec60                                       ; IMP:_objc_retain
+0x02c86c  bl         #0x7f000                                       ; IMP:_swift_release
+0x02c888  tbz        x16, #0x3e, #0x2c890
+0x02c88c  brk        #0xc471
+0x02c890  b          #0x7ec50                                       ; IMP:_objc_release
+0x02c8b8  ldr        x8, [x8, #0x5a8]                               ; __data+0x78
+0x02c8bc  cmn        x8, #1
+0x02c8d0  ldr        x21, [x8, #0xc48]                              ; __common+0x108
+0x02c8d8  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x02c8dc  bl         #0x2e600                                       ; sub_2e600
+0x02c8e4  bl         #0x67da0                                       ; sub_67da0
+0x02c8f0  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x02c8fc  bl         #0x7e330                                       ; IMP:_$sSS10FoundationE19_bridgeToObjectiveCSo8NSStringCyF
+0x02c90c  add        x8, x8, #0xf40                                 ; __auth_stubs+0x1ce0
+0x02c910  bl         #0x2e66c                                       ; sub_2e66c
+0x02c920  bl         #0x593f4                                       ; sub_593f4
+0x02c92c  bl         #0x7ec50                                       ; IMP:_objc_release
+0x02c934  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x02c938  cbz        x19, #0x2c99c
+0x02c964  bl         #0x594c0                                       ; sub_594c0
+0x02c968  tbnz       w0, #0, #0x2c994
+0x02c970  add        x8, x8, #0xf70                                 ; __auth_stubs+0x1ce0
+0x02c974  bl         #0x2e66c                                       ; sub_2e66c
+0x02c98c  bl         #0x594c0                                       ; sub_594c0
+0x02c990  tbz        w0, #0, #0x2c9a0
+0x02c998  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x02c9b4  retab      
+0x02c9bc  add        x0, x0, #0x5a8                                 ; __objc_data+0x18d0
+0x02c9c4  add        x16, x16, #0x624                               ; __text+0x24000
+0x02c9d0  bl         #0x7eff0                                       ; IMP:_swift_once
+0x02c9d4  b          #0x2c8c4                                       ; sub_2c8c4
+0x02ca00  ldr        x8, [x8, #0x5b0]                               ; __data+0x80
+0x02ca04  cmn        x8, #1
+0x02ca18  ldr        x22, [x8, #0xc50]                              ; __common+0x110
+0x02ca20  bl         #0x7f0e0                                       ; IMP:_swift_unknownObjectRetain
+0x02ca2c  bl         #0x7e330                                       ; IMP:_$sSS10FoundationE19_bridgeToObjectiveCSo8NSStringCyF
+0x02ca3c  add        x8, x8, #0xfd0                                 ; __auth_stubs+0x1ce0
+0x02ca40  bl         #0x2e66c                                       ; sub_2e66c
+0x02ca50  bl         #0x593f4                                       ; sub_593f4
+0x02ca5c  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x02ca64  bl         #0x7ec50                                       ; IMP:_objc_release
+0x02ca80  bl         #0x67da0                                       ; sub_67da0
+0x02caa4  bl         #0x59740                                       ; sub_59740
+0x02cab0  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x02cab4  cbnz       x23, #0x2cb1c
+0x02cac0  add        x8, x8, #0xff0                                 ; __auth_stubs+0x1ce0
+0x02cac4  bl         #0x2e66c                                       ; sub_2e66c
+0x02cad4  bl         #0x594c0                                       ; sub_594c0
+0x02cad8  tbnz       w0, #0, #0x2cb1c
+0x02cae4  add        x8, x8, #0x10                                  ; __cstring+0xd30
+0x02caf4  bl         #0x1264c                                       ; sub_1264c
+0x02cb00  ldr        x1, [x1, #0x1a8]                               ; GOT(_$sSSN)
+0x02cb14  bl         #0x7e630                                       ; IMP:_$sSy10FoundationE8containsySbqd__SyRd__lF
+0x02cb18  tbz        w0, #0, #0x2cb28
+0x02cb20  bl         #0x7f0c0                                       ; IMP:_swift_unknownObjectRelease
+0x02cb40  retab      
+0x02cb48  add        x0, x0, #0x5b0                                 ; __objc_data+0x18d0
+0x02cb50  add        x16, x16, #0x65c                               ; __text+0x24000
+0x02cb5c  bl         #0x7eff0                                       ; IMP:_swift_once
+0x02cb60  b          #0x2ca0c                                       ; sub_2ca0c
+0x02cb80  bl         #0x7ef10                                       ; IMP:_swift_getObjCClassFromMetadata
+0x02cb84  bl         #0x7ebe0                                       ; IMP:_objc_allocWithZone
+0x02cb90  bl         #0x7d3f0                                       ; IMP:_$s10Foundation3URLV19_bridgeToObjectiveCSo5NSURLCyF
+0x02cb9c  ldr        x1, [x8, #0x438]                               ; SELREF("initWithURL:")
+0x02cba8  bl         #0x7ec20                                       ; IMP:_objc_msgSend
+0x02cbb4  bl         #0x7d400                                       ; IMP:_$s10Foundation3URLVMa
